@@ -1,0 +1,12 @@
+  6054  Banana    745
+    56  Cola       70
+  2234  Box       823
+   774  Ramyen   9011 
+  9804  Tomato     45
+   235  Water     560
+  7342  7up        45
+   323  $45      2345 
+    70  Textbook  890
+    54  Dol        22
+    12  Bal_dig     5
+163023  PNU_CSED 8767

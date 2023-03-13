@@ -1,0 +1,31 @@
+    lime
+    lychee
+    blueberry
+    boysenberry 
+    cherry
+    peach -
+    apple
+    apricot
+    melon 
+    nectarine : a peach without its skin    
+    avocado
+    grapefruit
+    kiwifruit
+    lemon    
+    coconut
+    fig
+    °¨ÀÚ
+    grape
+    plum
+    pomegranate
+    quince
+    raspberry
+    mango 
+    orange
+    papaya 
+    passion fruit 
+    pear
+    pineapple   
+    ¹Ì´õ´ö 
+    strawberry
+    watermelon

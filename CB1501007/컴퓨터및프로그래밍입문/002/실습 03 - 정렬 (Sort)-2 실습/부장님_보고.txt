@@ -1,0 +1,12 @@
+    12  Bal_dig     5
+    54  Dol        22
+  9804  Tomato     45
+  7342  7up        45
+    56  Cola       70
+   235  Water     560
+  6054  Banana    745
+  2234  Box       823
+    70  Textbook  890
+   323  $45      2345 
+163023  PNU_CSED 8767
+   774  Ramyen   9011 
