@@ -1,2 +1,5 @@
-a, b = input().split()
-print(a, b, a + b)
+m = list(map(int, input().split()))
+print(m)
+print(sum(m))
+print(max(m))
+print(min(m))
