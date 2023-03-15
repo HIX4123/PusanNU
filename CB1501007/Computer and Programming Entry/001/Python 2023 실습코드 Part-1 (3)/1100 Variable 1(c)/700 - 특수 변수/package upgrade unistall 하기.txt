@@ -1,0 +1,7 @@
+When you already have an older version of numpy, use this:
+
+>> pip install numpy --upgrade.
+
+If it still doesn't work, try:
+
+>> pip install numpy --upgrade --ignore-installed

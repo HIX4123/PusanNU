@@ -1,0 +1,9 @@
+#-------------------------------------------------------------------------------
+# Purpose:     2019 Power Python
+# Author:      $[UserName]       $[Univ]
+# Name:        $[ActiveDoc-Name] 
+# Purpose:      
+# 
+# Created:     $[DateTime-'DD/MM/YYYY'-DateFormat] 
+# Copyright:   (c) $[UserName] $[DateTime-'YYYY'-DateFormat] 
+#-------------------------------------------------------------------------------

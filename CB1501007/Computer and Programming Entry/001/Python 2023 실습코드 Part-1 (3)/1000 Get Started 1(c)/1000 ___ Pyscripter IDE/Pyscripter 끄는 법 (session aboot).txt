@@ -1,0 +1,4 @@
+
+    Application Run Menu > Python Engine > Reinitialize Python Engine or
+    Interpreter context menu > Python Engine > Reinitialize Python Engine or
+    Keyboard shortcut CTRL-F2
