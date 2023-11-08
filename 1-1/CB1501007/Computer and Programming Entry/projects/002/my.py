@@ -1,0 +1,5 @@
+m = list(map(int, input().split()))
+print(m)
+print(sum(m))
+print(max(m))
+print(min(m))

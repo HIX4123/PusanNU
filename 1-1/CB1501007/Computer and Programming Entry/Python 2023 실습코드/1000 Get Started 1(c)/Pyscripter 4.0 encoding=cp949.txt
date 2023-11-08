@@ -1,0 +1,1 @@
+#pyscripter 4.0에서 읽을 경우에는  encoding='cp949'으로 읽어야 한다.

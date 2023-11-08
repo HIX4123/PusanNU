@@ -1,0 +1,14 @@
+digraph {
+	node [fontname=NanumMyeongjo fontsize=10.0]
+	edge [fontname="gulim.ttc" fontsize=5.0]
+	layout=circo
+	"닭"
+	"말"
+	"소"
+	"양"
+	"닭" -> "말" [label="수식" color=red]
+	"말" -> "양" [label="가을" color=blue]
+	"양" -> "소" [label=Winter color=green]
+	"닭" -> "소" [label="여름" color=black]
+	"소" -> "말" [label="f(x,y)" color=gray style=dashed]
+}

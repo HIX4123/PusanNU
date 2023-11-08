@@ -1,0 +1,270 @@
+GTGTTCTATTTTT
+         5565 function calls (5470 primitive calls) in 0.014 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        7    0.004    0.001    0.004    0.001 {built-in method io.open_code}
+        7    0.002    0.000    0.002    0.000 {built-in method marshal.loads}
+       31    0.001    0.000    0.001    0.000 {built-in method nt.stat}
+        7    0.001    0.000    0.001    0.000 {method 'read' of '_io.BufferedReader' objects}
+       66    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:96(_path_join)
+       24    0.000    0.000    0.001    0.000 {built-in method builtins.__build_class__}
+        2    0.000    0.000    0.000    0.000 enum.py:1643(convert_class)
+        1    0.000    0.000    0.000    0.000 {built-in method nt.listdir}
+      8/1    0.000    0.000    0.014    0.014 {built-in method builtins.exec}
+        8    0.000    0.000    0.003    0.000 <frozen importlib._bootstrap>:1056(_find_spec)
+       13    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:1604(find_spec)
+        1    0.000    0.000    0.000    0.000 {built-in method io.open}
+   102/98    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x00007FFDAB7A8F90}
+        9    0.000    0.000    0.001    0.000 enum.py:485(__new__)
+       65    0.000    0.000    0.000    0.000 enum.py:353(__setitem__)
+      202    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+       76    0.000    0.000    0.000    0.000 _constants.py:57(__new__)
+        7    0.000    0.000    0.007    0.001 <frozen importlib._bootstrap_external>:1007(get_code)
+      9/3    0.000    0.000    0.000    0.000 _parser.py:507(_parse)
+        7    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+      8/1    0.000    0.000    0.013    0.013 <frozen importlib._bootstrap>:1167(_find_and_load)
+       60    0.000    0.000    0.000    0.000 enum.py:828(__setattr__)
+      5/3    0.000    0.000    0.000    0.000 _parser.py:447(_parse_sub)
+       87    0.000    0.000    0.000    0.000 enum.py:58(_is_sunder)
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:437(cache_from_source)
+  662/650    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+       87    0.000    0.000    0.000    0.000 enum.py:78(_is_private)
+     12/3    0.000    0.000    0.000    0.000 _compiler.py:37(_compile)
+        7    0.000    0.000    0.005    0.001 <frozen importlib._bootstrap_external>:1127(get_data)
+      8/1    0.000    0.000    0.012    0.012 <frozen importlib._bootstrap>:666(_load_unlocked)
+      7/1    0.000    0.000    0.012    0.012 <frozen importlib._bootstrap_external>:934(exec_module)
+        3    0.000    0.000    0.000    0.000 _constants.py:70(<listcomp>)
+       85    0.000    0.000    0.000    0.000 enum.py:47(_is_dunder)
+      424    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.002    0.002 _parser.py:1(<module>)
+        1    0.000    0.000    0.005    0.005 _compiler.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+      8/1    0.000    0.000    0.013    0.013 <frozen importlib._bootstrap>:1122(_find_and_load_unlocked)
+       66    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:119(<listcomp>)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:179(_get_module_lock)
+        1    0.000    0.000    0.001    0.001 enum.py:1(<module>)
+        1    0.000    0.000    0.012    0.012 __init__.py:1(<module>)
+       10    0.000    0.000    0.000    0.000 {method 'search' of 're.Pattern' objects}
+      197    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+       21    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:84(_unpack_uint32)
+       12    0.000    0.000    0.000    0.000 enum.py:978(_find_data_type_)
+        4    0.000    0.000    0.000    0.000 enum.py:237(__set_name__)
+     14/5    0.000    0.000    0.000    0.000 _parser.py:172(getwidth)
+        7    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:1464(_get_spec)
+        1    0.000    0.000    0.014    0.014 hee.py:3(main)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:493(_init_module_attrs)
+      241    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.input}
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:132(_path_split)
+        3    0.000    0.000    0.000    0.000 _compiler.py:509(_compile_info)
+        3    0.000    0.000    0.000    0.000 _compiler.py:571(_code)
+        1    0.000    0.000    0.000    0.000 _constants.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1408(_path_hooks)
+      308    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       19    0.000    0.000    0.000    0.000 enum.py:932(_check_for_existing_members_)
+       89    0.000    0.000    0.000    0.000 _parser.py:162(__getitem__)
+        3    0.000    0.000    0.000    0.000 _constants.py:71(<dictcomp>)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:100(acquire)
+        2    0.000    0.000    0.000    0.000 enum.py:1501(__and__)
+        7    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:727(_compile_bytecode)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:172(_path_isabs)
+      212    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:642(_classify_pyc)
+       20    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:125(release)
+       70    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:244(_verbose_message)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:778(spec_from_file_location)
+       16    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:567(_get_cached)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:566(module_from_spec)
+        3    0.000    0.000    0.000    0.000 _parser.py:970(parse)
+       45    0.000    0.000    0.000    0.000 _parser.py:231(__next)
+       12    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 enum.py:1053(Enum)
+        7    0.000    0.000    0.000    0.000 enum.py:1006(_find_new_)
+        7    0.000    0.000    0.000    0.000 enum.py:470(__prepare__)
+      114    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        3    0.000    0.000    0.001    0.000 _compiler.py:738(compile)
+       58    0.000    0.000    0.000    0.000 {built-in method builtins.setattr}
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:392(cached)
+       23    0.000    0.000    0.000    0.000 types.py:164(__init__)
+       14    0.000    0.000    0.000    0.000 enum.py:942(_get_mixins_)
+        8    0.000    0.000    0.000    0.000 __init__.py:89(find_spec)
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1421(_path_importer_cache)
+       82    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1599(_get_spec)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:169(__enter__)
+       10    0.000    0.000    0.000    0.000 __init__.py:272(_compile)
+       42    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:134(<genexpr>)
+       65    0.000    0.000    0.000    0.000 enum.py:69(_is_internal_class)
+      2/1    0.000    0.000    0.006    0.006 <frozen importlib._bootstrap>:1209(_handle_fromlist)
+       31    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:140(_path_stat)
+       24    0.000    0.000    0.000    0.000 enum.py:747(__delattr__)
+        2    0.000    0.000    0.000    0.000 copyreg.py:22(constructor)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.sorted}
+     18/2    0.000    0.000    0.012    0.006 <frozen importlib._bootstrap>:233(_call_with_frames_removed)
+       27    0.000    0.000    0.000    0.000 enum.py:37(_is_descriptor)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1559(__init__)
+       50    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 _compiler.py:241(_optimize_charset)
+       10    0.000    0.000    0.001    0.000 __init__.py:173(search)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1655(_fill_cache)
+        3    0.000    0.000    0.000    0.000 _constants.py:69(_makecodes)
+       35    0.000    0.000    0.000    0.000 _parser.py:252(get)
+       84    0.000    0.000    0.000    0.000 {method 'get' of 'mappingproxy' objects}
+       28    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:71(__init__)
+       13    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:405(parent)
+       10    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:150(_path_is_mode_type)
+       11    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:675(_validate_timestamp_pyc)
+       30    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1032(__exit__)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:599(_check_name_wrapper)
+       21    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        2    0.000    0.000    0.000    0.000 enum.py:688(__call__)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:198(cb)
+        8    0.000    0.000    0.000    0.000 enum.py:772(__getattr__)
+       30    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1028(__enter__)
+        1    0.000    0.000    0.000    0.000 copyreg.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 enum.py:1314(Flag)
+       23    0.000    0.000    0.000    0.000 enum.py:224(__set_name__)
+       36    0.000    0.000    0.000    0.000 _parser.py:170(append)
+        7    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:1496(find_spec)
+        8    0.000    0.000    0.000    0.000 {built-in method nt._path_splitroot}
+        1    0.000    0.000    0.000    0.000 enum.py:1745(<listcomp>)
+        1    0.000    0.000    0.000    0.000 enum.py:465(EnumType)
+        1    0.000    0.000    0.000    0.000 {method 'close' of '_io.TextIOWrapper' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:251(<dictcomp>)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:48(_new_module)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:173(__exit__)
+       24    0.000    0.000    0.000    0.000 {built-in method builtins.delattr}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
+        1    0.000    0.000    0.000    0.000 _constants.py:56(_NamedIntConstant)
+        3    0.000    0.000    0.000    0.000 copyreg.py:12(pickle)
+        1    0.000    0.000    0.014    0.014 <string>:1(<module>)
+       13    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:67(_relax_case)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:216(_lock_unlock_module)
+        3    0.000    0.000    0.000    0.000 _parser.py:222(__init__)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:748(find_spec)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:922(find_spec)
+       54    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:357(__init__)
+        7    0.000    0.000    0.000    0.000 enum.py:346(__init__)
+        4    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        9    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:159(_path_isfile)
+        2    0.000    0.000    0.000    0.000 _parser.py:94(closegroup)
+       50    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        4    0.000    0.000    0.000    0.000 enum.py:1268(__new__)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1146(path_stats)
+       50    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        7    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+       20    0.000    0.000    0.000    0.000 enum.py:798(<genexpr>)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        1    0.000    0.000    0.000    0.000 _casefix.py:1(<module>)
+       31    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+       31    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 enum.py:1299(FlagBoundary)
+        7    0.000    0.000    0.000    0.000 enum.py:964(_find_data_repr_)
+        1    0.000    0.000    0.000    0.000 __init__.py:140(RegexFlag)
+       21    0.000    0.000    0.000    0.000 _parser.py:158(__len__)
+      2/1    0.000    0.000    0.000    0.000 _compiler.py:434(_get_literal_prefix)
+        4    0.000    0.000    0.000    0.000 {built-in method builtins.locals}
+       12    0.000    0.000    0.000    0.000 _parser.py:109(__init__)
+        1    0.000    0.000    0.000    0.000 functools.py:518(decorating_function)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1696(path_hook_for_FileFinder)
+      2/1    0.000    0.000    0.006    0.006 {built-in method builtins.__import__}
+        7    0.000    0.000    0.000    0.000 {built-in method _imp.find_frozen}
+        3    0.000    0.000    0.000    0.000 {built-in method _sre.compile}
+        1    0.000    0.000    0.000    0.000 <frozen zipimport>:64(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'match' of 're.Pattern' objects}
+       14    0.000    0.000    0.000    0.000 _parser.py:247(match)
+        1    0.000    0.000    0.000    0.000 _compiler.py:465(_get_charset_prefix)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:165(__init__)
+       24    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+       24    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        1    0.000    0.000    0.000    0.000 functools.py:35(update_wrapper)
+        1    0.000    0.000    0.000    0.000 enum.py:1612(global_enum)
+       22    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+       10    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 enum.py:794(__iter__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:422(spec_from_loader)
+       21    0.000    0.000    0.000    0.000 {built-in method nt.fspath}
+        8    0.000    0.000    0.000    0.000 _parser.py:284(tell)
+        6    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+       39    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+       10    0.000    0.000    0.000    0.000 _parser.py:79(groups)
+        1    0.000    0.000    0.000    0.000 __init__.py:337(Scanner)
+       10    0.000    0.000    0.000    0.000 enum.py:92(_is_single_bit)
+        4    0.000    0.000    0.000    0.000 _compiler.py:568(isstring)
+        2    0.000    0.000    0.000    0.000 _parser.py:82(opengroup)
+        3    0.000    0.000    0.000    0.000 _parser.py:954(fix_flags)
+        4    0.000    0.000    0.000    0.000 enum.py:1289(_generate_next_value_)
+        1    0.000    0.000    0.000    0.000 _parser.py:107(SubPattern)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1097(__init__)
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+        9    0.000    0.000    0.000    0.000 hee.py:34(<lambda>)
+        1    0.000    0.000    0.000    0.000 _parser.py:71(State)
+        3    0.000    0.000    0.000    0.000 _parser.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 _parser.py:221(Tokenizer)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:413(has_location)
+       11    0.000    0.000    0.000    0.000 {method 'setdefault' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:254(_requires_builtin_wrapper)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1684(<setcomp>)
+       12    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 enum.py:1093(__new__)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1565(<genexpr>)
+        4    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+       24    0.000    0.000    0.000    0.000 {built-in method builtins.chr}
+       17    0.000    0.000    0.000    0.000 enum.py:1144(__init__)
+        9    0.000    0.000    0.000    0.000 {method 'group' of 're.Match' objects}
+        5    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        8    0.000    0.000    0.000    0.000 enum.py:430(<genexpr>)
+       15    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 enum.py:1263(StrEnum)
+        6    0.000    0.000    0.000    0.000 {method 'partition' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 _compiler.py:214(_compile_charset)
+        4    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+        8    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+        2    0.000    0.000    0.000    0.000 enum.py:1627(_simple_enum)
+        1    0.000    0.000    0.000    0.000 enum.py:168(_auto_null)
+        1    0.000    0.000    0.000    0.000 enum.py:1251(ReprEnum)
+        4    0.000    0.000    0.000    0.000 _compiler.py:31(_combine_flags)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:772(create_module)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1122(get_filename)
+        9    0.000    0.000    0.000    0.000 {method 'span' of 're.Match' objects}
+        8    0.000    0.000    0.000    0.000 {method 'pop' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 functools.py:479(lru_cache)
+        1    0.000    0.000    0.000    0.000 enum.py:1789(EnumCheck)
+        1    0.000    0.000    0.000    0.000 enum.py:1257(IntEnum)
+        1    0.000    0.000    0.000    0.000 _constants.py:23(error)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:931(create_module)
+        4    0.000    0.000    0.000    0.000 enum.py:177(__init__)
+        1    0.000    0.000    0.000    0.000 enum.py:1538(IntFlag)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:164(_path_isdir)
+        1    0.000    0.000    0.000    0.000 _compiler.py:396(_simple)
+        2    0.000    0.000    0.000    0.000 {method 'items' of 'mappingproxy' objects}
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.callable}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.globals}
+        1    0.000    0.000    0.000    0.000 enum.py:339(_EnumDict)
+        1    0.000    0.000    0.000    0.000 enum.py:806(__members__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(exec_module)
+        1    0.000    0.000    0.000    0.000 enum.py:1800(verify)
+        1    0.000    0.000    0.000    0.000 enum.py:183(property)
+        1    0.000    0.000    0.000    0.000 enum.py:173(auto)
+        1    0.000    0.000    0.000    0.000 enum.py:652(<listcomp>)
+        1    0.000    0.000    0.000    0.000 enum.py:23(nonmember)
+        4    0.000    0.000    0.000    0.000 enum.py:234(__init__)
+        1    0.000    0.000    0.000    0.000 enum.py:229(_proto_member)
+        3    0.000    0.000    0.000    0.000 _compiler.py:426(_get_iscased)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        4    0.000    0.000    0.000    0.000 __init__.py:96(<lambda>)
+        1    0.000    0.000    0.000    0.000 enum.py:30(member)
+        1    0.000    0.000    0.000    0.000 _parser.py:166(__setitem__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:797(is_package)
+        1    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+
+

@@ -1,0 +1,7 @@
+digraph G {
+   Hello -> World ;
+   World -> PNU ; 
+   Hello -> PNU ;
+   World -> Wow ;
+   World -> Korea ;
+} 

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>for문</title>
+<script>	 
+	function show() {
+		var str = "" ;
+		for (var i=1; i<=9; i++) {
+			str = str + i + "<br>" ;
+		}
+		document.getElementById("msg").innerHTML = str ;
+	}
+	 
+</script>
+</head>
+<body>
+<form name="myform">	
+	<input type="button" value="반복문연습" onclick="show()">	
+	<div id="msg">		
+	</div>
+</form>
+</body>
+</html>

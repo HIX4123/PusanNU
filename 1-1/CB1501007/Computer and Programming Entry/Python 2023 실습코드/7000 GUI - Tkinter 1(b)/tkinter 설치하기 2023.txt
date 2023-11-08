@@ -1,0 +1,14 @@
+1. tkinter 설치
+ 
+
+
+ 
+
+pip install tk
+ 
+
+terminal에 위 명령어를 입력합시다.
+
+주의할 점은 라이브러리 이름이 tkinter라고 해서 pip install tkinter라고 입력하면 설치되지 않습니다.
+
+pip install tk라고 입력해야 합니다.

@@ -1,0 +1,10 @@
+PitchNo
+PitcherTeam	
+Batter	
+Top/Bottom	
+Outs	
+Balls	
+Strikes	
+ContactPositionX	
+ContactPositionY	
+ContactPositionZ

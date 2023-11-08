@@ -1,0 +1,7 @@
+digraph G {
+    node [fontname="Gulim.ttc"]
+    한글 -> 영어;
+    한글 -> "부산 갈매기"
+    "부산 갈매기" -> English
+    Korean -> English;
+}

@@ -1,0 +1,65 @@
+\documentclass[a4paper, titlepage]{article}
+\usepackage[hangul]{kotex}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\pagestyle{headings}
+\title{인터넷과웹기초 팀 프로젝트 중간보고서}
+\author{202355517 권민규}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\section{개발 목표}
+I'm feeling lucky
+
+구글의 검색 창 밑에는 I'm feeling lucky라는 버튼이 있다. 이를 그냥 누르면 구글의 두들 사이트가 뜨고, 어떤 검색어를 입력한 상태에서 누르면 해당 검색 결과의 첫 번째 사이트로 즉시 이동한다.
+
+이에서 착안해 I'm feeling lucky 기능을 네이버와 유튜브에 각각 구현해 본다.
+
+
+\section{사용 API 소개}
+Youtube Analytics API\\
+\href{https://console.cloud.google.com/apis/library/youtubeanalytics.googleapis.com?project=oceanic-diagram-387216&supportedpurview=project}{전자 열람 시 클릭으로 이동 가능}\\\\
+Naver Search API\\
+\href{https://developers.naver.com/apps/#/cooperation}{전자 열람 시 클릭으로 이동 가능}
+
+
+\section{UX 시나리오 설정}
+
+\subsection{UI 구성}
+
+\paragraph{Form의 서로 다른 type의 input 3개 이상 사용}
+\begin{enumerate}
+    \item{text | }검색 키워드 입력
+    \item{select | }검색 대상 사이트 선택
+    \item{button | }I'm feeling lucky 버튼
+\end{enumerate}
+
+\paragraph{List 또는 Table 1개 이상 사용}
+
+table | 재생 목록
+
+\subsection{UX 기능}
+\begin{enumerate}
+    \item site에서 Naver을 고른 채 input에 검색어를 입력하고 luck 버튼을 누르면 네이버 검색결과에서 제일 먼저 나오는 사이트를 새 창에 연다.
+    \item site에서 Youtube을 고른 채 input에 검색어를 입력하고 luck 버튼을 누르면 유튜브 검색결과에서 제일 먼저 나오는 사이트를 임베디드에 연다.
+    \item 아무것도 입력하지 않은 상태에서 luck 버튼을 누르면 화면 아래쪽에 검색 기록을 띄운다. 사이트가 새로고침되면 기록은 사라진다.
+\end{enumerate}
+
+
+\section{개발 계획 및 일정}
+
+21주차 - HTML, CSS 등 프론트엔드 구성\\
+22주자 - JavaScript, Node.js 등 백엔드 및 API구성\\
+나머지 - 점검 및 보고서, 동영상 제작 후 제출
+
+\end{document}

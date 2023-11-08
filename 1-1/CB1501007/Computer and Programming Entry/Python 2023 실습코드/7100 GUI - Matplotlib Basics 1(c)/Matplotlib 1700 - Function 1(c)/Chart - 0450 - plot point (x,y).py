@@ -1,0 +1,11 @@
+
+import random
+import matplotlib.pyplot as plot
+
+count = 1024
+X = [random.random() for i in range(count)]
+Y = [random.random() for i in range(count)]
+
+plot.scatter(X, Y, alpha=0.3 )
+plot.show()
+

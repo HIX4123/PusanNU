@@ -1,0 +1,10 @@
+graph {
+	Apple
+	Book
+	Coke
+	Dish
+	Apple -- Book
+	Apple -- Dish
+	Apple -- Coke
+	Coke -- Dish
+}

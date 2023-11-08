@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 메타데이터 설정 -->
+        <title>I'm Feeling SO Lucky</title>
+
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="구글의 I'm feeling lucky 버튼을 다른 검색 엔진에 적용시켜보았습니다."
+        />
+        <meta
+            name="keywords"
+            content="HTML, CSS, JavaScript, Node.js, Naver API, Youtube API"
+        />
+        <meta name="author" content="202355517 권민규" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 파비콘 설정 -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="images/fabicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="images/fabicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="images/fabicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="images/fabicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="images/fabicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="images/fabicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="images/fabicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="images/fabicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="images/fabicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="images/fabicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/fabicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="images/fabicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/fabicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="images/fabicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="images/fabicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 스타일시트 및 스크립트 설정 -->
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="stylesheet" href="styles/youtubeEmbed.css" />
+        <script src="./scripts/main.js"></script>
+    </head>
+
+
+    <body>
+        <!-- 헤더 -->
+        <header class="Shells">
+            <h1 id="tmp">I'm Feeling SO Lucky</h1>
+        </header>
+        <!-- 모바일 창에서 로그를 표시하는 용도의 내비게이터터 -->
+        <nav><a>Log</a></nav>
+        <!-- 사이드바: 로그 -->
+        <aside>
+            <h2>Log</h2>
+            <p>
+                You can view your search history.<br />
+                Refreshing the window will reset it.
+            </p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>time</th>
+                        <th>keyword</th>
+                        <th>target</th>
+                    </tr>
+                </thead>
+                <tbody id="log"></tbody>
+            </table>
+        </aside>
+        <!-- 메인 폼 및 유튜브 임베디드 -->
+        <main>
+            <!-- 폼 -->
+            <form id="form" onsubmit="func1()">
+                <label for="key"><p>Search keywords</p></label><br />
+                <input type="text" id="key" name="key" autofocus />
+                <br /><br />
+
+                <label for="target"><p>Sites to search for</p></label><br />
+
+                <select id="target" name="target">
+                    <option value="" selected>--Select--</option>
+                    <option value="naver">NAVER</option>
+                    <option value="youtube">YouTube</option>
+                </select>
+                <br /><br />
+                <br />
+
+                <input type="submit" value="I'm feeling lucky" />
+                <input type="reset" value="Reset" onclick="func2()" />
+            </form>
+
+            <!-- 유튜브 임베디드 -->
+            <div class="embed-container">
+                <iframe
+                    src="https://www.youtube.com/embed/gcCqclvIcn4"
+                    frameborder="0"
+                    title="YouTube video player"
+                    id="YouTube video player"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </main>
+        <!-- 푸터 -->
+        <footer class="Shells">
+            <p>
+                © 2023 SeworL corp. 202355517 Mingyu Kwon<br />
+                All search results are attributed to Naver and YouTube and the
+                creators of those posts.
+            </p>
+        </footer>
+    </body>
+</html>

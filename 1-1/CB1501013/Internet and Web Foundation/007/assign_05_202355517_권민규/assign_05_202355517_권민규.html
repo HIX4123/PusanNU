@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignments</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                max-width: 400px;
+            }
+            header {
+                background-color: #80ab3d;
+                color: whitesmoke;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 10px;
+                padding: 4px;
+                width: 100%;
+            }
+            h1 {
+                font-size: 16px;
+            }
+            section {
+                margin: 10px 0;
+                width: 400px;
+            }
+            input[name="name"],
+            input[name="email"] {
+                margin: 10px 0;
+                height: 40px;
+                width: 100%;
+            }
+            input[name="year"],
+            select[name="month"],
+            input[name="day"] {
+                margin: 10px 0;
+                height: 40px;
+                width: 32%;
+            }
+            form {
+                border: 1px solid gray;
+                padding: 8px 24px;
+                margin: 10px 0;
+            }
+            textarea {
+                width: 100%;
+                height: 8em;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                background-color: #80ab3d;
+                color: whitesmoke;
+                text-align: center;
+                padding: 4px;
+                width: 49%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>개인 신청 자료</h1>
+        </header>
+        <section id="name">
+            <label>성명</label><br />
+
+            <input type="text" name="name" placeholder="성명 입력" />
+        </section>
+
+        <section id="email">
+            <label>E-mail</label><br />
+
+            <input type="text" name="email" placeholder="E-mail 입력" />
+        </section>
+
+        <section id="birth">
+            <label>생년월일</label><br />
+
+            <input type="text" name="year" placeholder="년" />
+            <select name="month" placeholder="월">
+                <option>1월</option>
+                <option>2월</option>
+                <option>3월</option>
+                <option>4월</option>
+                <option>5월</option>
+                <option>6월</option>
+                <option>7월</option>
+                <option>8월</option>
+                <option>9월</option>
+                <option>10월</option>
+                <option>11월</option>
+                <option>12월</option>
+            </select>
+            <input type="text" name="day" placeholder="일" />
+        </section>
+
+        <section id="gender">
+            <label>성별</label><br />
+
+            <form>
+                <label for="man">남</label
+                ><input type="radio" name="gender" id="man" /><label for="woman"
+                    >여</label
+                >
+                <input type="radio" name="gender" id="woman" />
+            </form>
+        </section>
+
+        <section id="interests">
+            <label>관심 분야</label><br />
+
+            <form>
+                <label for="C">C</label
+                ><input type="checkbox" name="interest" id="C" />
+                <label for="Python">파이썬</label>
+                <input type="checkbox" name="interest" id="Python" />
+                <label for="R">R</label
+                ><input type="checkbox" name="interest" id="R" />
+                <label for="Javascript">Javascript</label
+                ><input type="checkbox" name="interest" id="Javascript" />
+            </form>
+        </section>
+
+        <section id="others">
+            <label for="other">기타</label><br />
+            <textarea name="others" id="other"></textarea>
+        </section>
+
+        <footer>
+            <input type="submit" value="확인" />
+            <input type="reset" value="취소" />
+        </footer>
+    </body>
+</html>

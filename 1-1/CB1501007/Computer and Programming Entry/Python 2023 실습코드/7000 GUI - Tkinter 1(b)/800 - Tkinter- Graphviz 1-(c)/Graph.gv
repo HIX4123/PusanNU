@@ -1,0 +1,11 @@
+graph {
+	bgcolor=yellow
+	Apple
+	Book
+	Coke
+	Dish
+	Apple -- Book [label=0.2]
+	Apple -- Dish [label="한글" fontname="gulim.ttc"]
+	Apple -- Coke
+	Coke -- Dish [label=glabel]
+}

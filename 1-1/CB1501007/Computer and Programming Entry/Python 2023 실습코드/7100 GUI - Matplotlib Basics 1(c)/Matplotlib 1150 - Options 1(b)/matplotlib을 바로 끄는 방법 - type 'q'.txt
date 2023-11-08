@@ -1,0 +1,8 @@
+
+
+By default matplotlib figures can be closed using the q key. 
+If instead you want to use the 1 key you can add
+
+plt.rcParams["keymap.quit"] = "1"
+
+somewhere on top of your script.

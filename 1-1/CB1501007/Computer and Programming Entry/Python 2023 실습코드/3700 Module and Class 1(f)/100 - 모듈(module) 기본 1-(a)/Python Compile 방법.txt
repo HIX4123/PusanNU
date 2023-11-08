@@ -1,0 +1,23 @@
+# 컴파일할 특정 디렉토리로 이동
+cd /home/centos/py/
+
+
+# 컴파일 명령어 실행
+python -m compileall .
+
+
+# 기존 컴파일 파일 overwrite
+python -m compileall -f .
+
+
+# 특정 파일만 컴파일 하는 방법
+python -m py_compile name.py
+
+
+# 리눅스 쉘에서 실행시키는 방법
+python 파일 가장 최상단에 #!/usr/bin/python 추가 (경로는 상황에 따라 변경)
+
+
+# 참고: python 3.x 버전의 경우 -f 를 해도 기존의 pyc파일 유지 ,cache 디렉토리로 compile 된다.
+이를 overwrite하려면 -b 옵션 추가
+python3 -m compileall -f -b .

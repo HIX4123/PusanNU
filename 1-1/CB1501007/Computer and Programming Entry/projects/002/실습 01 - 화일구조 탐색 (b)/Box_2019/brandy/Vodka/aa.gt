@@ -1,0 +1,18 @@
+info {
+	creator = "GraphThing 1.3.1"
+}
+
+vertex "A" at (168,101)
+vertex "B" at (359,167)
+vertex "C" at (162,236)
+vertex "D" at (329,247)
+vertex "E" at (463,206)
+vertex "F" at (315,80)
+
+edge "F" -- "A"
+edge "D" -- "B"
+edge "C" -- "A"
+edge "A" -- "B"
+edge "C" -- "D"
+edge "F" -- "B"
+edge "E" -- "B"

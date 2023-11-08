@@ -1,0 +1,16 @@
+교수님, 말씀하신 예외처리 관련 실습코드입니다.
+
+내부에 소스코드 5개가 있습니다.
+
+1.     Lab12- exception 00- basic.py : 예외발생의 예를 보여주기 위한 샘플코드 
+
+2.     Lab12- exception 01- handling(I).py : 발생한 예외를 처리하는 방법 I - try/except/else의 사용법
+
+3.     Lab12- exception 02- handling(II).py : 발생한 예외를 처리하는 방법 II - finally의 사용법
+
+4.     Lab12- exception 03- raise(I).py : 사용자 예외를 만들고, 발생(raise)시키는 방법
+
+5.     Lab12- exception 04- raise(II).py : 사용자 예외발생 시 인자를 함께 전달하고, 전달된 인자를 확인하는 방법
+
+ 
+

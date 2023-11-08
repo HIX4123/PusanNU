@@ -1,0 +1,35 @@
+DATA 볼륨에 대한 폴더 경로의 목록입니다.
+볼륨 일련 번호는 E211-E8C1입니다.
+D:.
+├─beer
+│  ├─ale
+│  │  ├─IPA
+│  │  │  ├─American
+│  │  │  ├─England
+│  │  │  └─Korean
+│  │  │      └─busan
+│  │  └─Stout
+│  └─larger
+├─brandy
+│  ├─Absinthe
+│  ├─Calvados
+│  ├─Orange
+│  └─Vodka
+├─Korean
+│  ├─dansul
+│  ├─makgulri
+│  └─Soju
+│      └─Craft
+├─whiskey
+│  ├─blanded
+│  └─single
+│      └─Burbon
+└─wine
+    ├─Carbernet
+    ├─Japan_sake
+    │  ├─Junmaiginzo
+    │  └─Pack_sake
+    ├─Merlot
+    ├─Port Wines
+    └─Shiraz
+        └─Whynot

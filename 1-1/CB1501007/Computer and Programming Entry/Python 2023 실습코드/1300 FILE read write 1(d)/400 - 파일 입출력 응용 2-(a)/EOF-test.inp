@@ -1,0 +1,18 @@
+Re: EOF in Python 
+
+--------------------------------------------------------------------------------
+
+2 ways to iterate files
+1) for loop
+
+Code:
+for line in open("file"):
+  print line2) while loop
+
+Code:
+f=open("file")
+while 1:
+  line=f.readline()
+  if not line: break
+  print line  
+f.close()

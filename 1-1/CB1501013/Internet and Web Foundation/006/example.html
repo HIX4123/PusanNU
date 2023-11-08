@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                width: 400px;
+            }
+            h1 {
+                background-color: green;
+                border-radius: 10px;
+                color: whitesmoke;
+                font-size: 16px;
+                padding: 10px;
+                text-align: center;
+                font-weight: normal;
+            }
+            label {
+                display: block;
+                background-color: aliceblue;
+                padding: 5px;
+                margin-top: 15px;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+            }
+            form div {
+                float: left;
+                width: 50%;
+                text-align: center;
+                padding: 20px;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                width: 45%;
+                padding: 10px;
+                background-color: green;
+                color: whitesmoke;
+                border: 0;
+                margin: 0 5px;
+            }
+            #button_div {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>당신이 좋아하는 과일을 선택해 보세요.</h1>
+        <form arction="#" method="post">
+            <label for="lname">성명</label>
+            <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="성명 입력"
+            /><br />
+            <label for="pswd">비밀번호</label>
+            <input
+                type="password"
+                id="pswd"
+                name="pswd"
+                placeholder="비밀번호 입력"
+            /><br />
+            <label for="favorite_fruit">좋아하는 과일을 선택하세요.</label>
+            <div>
+                <input type="radio" name="favorite_fruit" value="strawberry" />
+                <img src="img;img1.png" alt="strawberry" />
+            </div>
+            <div>
+                <input type="radio" name="favorite_fruit" value="banana" />
+                <img src="img;img1.png" alt="banana" />
+            </div>
+            <div>
+                <input type="radio" name="favorite_fruit" value="apple" />
+                <img src="img;img1.png" alt="apple" />
+            </div>
+            <div>
+                <input type="radio" name="favorite_fruit" value="watermelon" />
+                <img src="img;img1.png" alt="watermelon" />
+            </div>
+            <br />
+            <div id="button_div">
+                <input type="submit" value="결과 보기" />
+                <input type="reset" value="취소" />
+            </div>
+        </form>
+    </body>
+</html>

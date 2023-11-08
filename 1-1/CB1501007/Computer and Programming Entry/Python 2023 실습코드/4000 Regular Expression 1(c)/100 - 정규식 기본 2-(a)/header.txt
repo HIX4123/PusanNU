@@ -1,0 +1,26 @@
+Received: from sniperdata.pusan.ac.kr ( [164.125.7.132])
+	by pusan.ac.kr (psmtpd 5.30.0122)
+	with ESMTP id 5748966592189830097
+	for hgcho@pusan.ac.kr; Fri, 1 Jun 2012 16:26:35 +0900
+Received: from unknown (HELO uranus.scholarone.com) (170.107.183.89)
+	by 10.10.1.12 with SMTP; 1 Jun 2012 16:26:25 +0900
+X-Original-SENDERIP: 170.107.183.89
+X-Original-MAILFROM: onbehalfof+k.jackson+ieee.org@manuscriptcentral.com
+Received: from tss1be0073 (tss1be0073.tshhosting.com [10.237.148.148])
+	by uranus.scholarone.com (Postfix) with ESMTP id 174B04F421E;
+	Fri,  1 Jun 2012 03:26:24 -0400 (EDT)
+Date: Fri, 1 Jun 2012 03:26:24 -0400 (EDT)
+From: k.jackson@ieee.org
+Sender: onbehalfof+k.jackson+ieee.org@manuscriptcentral.com
+To: hgcho@pusan.ac.kr
+Cc: adrian.bors@york.ac.uk
+Message-ID: <1838559281.87411338535584092.JavaMail.wladmin@tss1be0073>
+Subject: * Reminder for review of TIP-08753-2012 On Random Field Captcha
+ Generation
+Errors-To: onbehalfof+k.jackson+ieee.org@manuscriptcentral.com
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+S1_REAL_RETURN_ADDRESS: k.jackson@ieee.org
+X-Errors-To: onbehalfof+k.jackson+ieee.org@manuscriptcentral.com
+
