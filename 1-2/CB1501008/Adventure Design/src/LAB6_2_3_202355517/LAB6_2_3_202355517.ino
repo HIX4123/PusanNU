@@ -1,6 +1,6 @@
-+++++++-int pin_LED = 13;  // LED 연결 핀
+int pin_LED = 13;  // LED 연결 핀
 unsigned long time_previous, time_current;
-unsigned long interv1l = 1000;  // 점멸 간격
+unsigned long interval = 1000;  // 점멸 간격
 boolean LED_state = false;      // LED
 
 void setup() {

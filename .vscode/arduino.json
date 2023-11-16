@@ -1,5 +1,6 @@
 {
     "configuration": "cpu=atmega2560",
     "board": "arduino:avr:mega",
-    "programmer": "arduinoasispatmega32u4"
+    "programmer": "avrispmkii",
+    "sketch": "1-2\\CB1501008\\Adventure Design\\src\\LAB6_2_3_202355517\\LAB6_2_3_202355517.ino"
 }
