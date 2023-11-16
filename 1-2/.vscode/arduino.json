@@ -1,6 +1,0 @@
-{
-    "configuration": "cpu=atmega2560",
-    "board": "arduino:avr:mega",
-    "sketch": "CB1501008\\Adventure Design\\src\\HW6_202355517\\HW6_202355517.ino",
-    "port": "COM3"
-}

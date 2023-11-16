@@ -8,13 +8,14 @@ int DIR2 = 41;
 
 void setup() {
   pinMode(Enable1, OUTPUT);
-  digitalWrite(Enable1, LOW);
+  digitalWrite(Enable1, HIGH);
   pinMode(PWM1, OUTPUT);
   pinMode(DIR1, OUTPUT);
   pinMode(Enable2, OUTPUT);
-  digitalWrite(Enable2, LOW);
+  digitalWrite(Enable2, HIGH);
   pinMode(PWM2, OUTPUT);
   pinMode(DIR2, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {

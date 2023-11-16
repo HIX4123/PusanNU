@@ -2,16 +2,16 @@
 
 LiquidCrystal lcd(44, 45, 46, 47, 48, 49);
 
-void readTemperature() { return analogRead(A1); }
+int readTemperature() { return analogRead(A1); }
 
 int readIlluminance() { return analogRead(A2); }
 
 void setup() {
   lcd.begin(16, 2);
   lcd.setCursor(0, 0);
-  lcd.write('TEMPERATURE:');
+  lcd.write("TEMPERATURE:");
   lcd.setCursor(0, 1);
-  lcd.write('ILLUMINANCE:');
+  lcd.write("ILLUMINANCE:");
 }
 
 void loop() {
