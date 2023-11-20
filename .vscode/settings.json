@@ -2,7 +2,8 @@
   "git.ignoreLimitWarning": true,
   "files.associations": {
     "stdio.h": "c",
-    "typeinfo": "c"
+    "typeinfo": "c",
+    "stdbool.h": "c"
   },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#164a8e",
