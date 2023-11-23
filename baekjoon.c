@@ -1,39 +1,25 @@
 #include <stdio.h>
-typedef struct student {
-  int id;
-  char *pname;
-  double points;
-} STUD;
-
-void stud_print(STUD *ps);
-void stud_swap(STUD *a, STUD *b);
-STUD *stud_get_last(STUD *ps_array);
-int stud_compare_points(STUD *ps1, STUD *ps2);
-STUD *stud_get_lowest_points(STUD *ps_begin, STUD *ps_end);
-
-void stud_print_array_in_decreasing_order(STUD *pnucse) {
-  STUD *first = pnucse;
-  STUD *last = stud_get_last(pnucse);
-  for (; pnucse < last; ++pnucse) {
-    for (STUD *i = pnucse + 1; i > first && stud_compare_points(i, i - 1);
-         --i) {
-      stud_swap(i, i - 1);
-    }
-  }
-  while (first++ <= last) {
-    stud_print(first);
-  }
-}
 
 int main(void) {
-  STUD pnucse[] = {{1, "Choi", 9.9}, {2, "Park", 0.1}, {3, "Kim", 5.0},
-                   {4, "Lee", 3.0},  {5, "Moon", 9.5}, {6, "Kang", 7.0},
-                   {7, "Jeon", 0.9}, {-1, NULL, 0}};
+  int len;
+  scanf("%d", &len);
+  int pos[len][2];
 
-  int test_id = 0;
-  scanf("%d", &test_id);
+  for (int i = len; i--;) {
+    scanf("%d %d", &pos[i][0], &pos[i][1]);
+  }
+  printf("\n");
 
-  stud_print_array_in_decreasing_order(pnucse);
+  int *first = pos, *last = pos + sizeof(pos);
+  for (int *i = first; i < last; i++) {
+    for (int *j = i + 1; j > first && j[1] < (j - 1)[1]; j--) {
+      int tmp = *j;
+      *j = *(j - 1);
+      *(j - 1) = tmp;
+    }
+  }
 
-  return 0;
+  for (int i = 0; i < len; i++) {
+    printf("%d %d\n", pos[i][0], pos[i][1]);
+  }
 }
