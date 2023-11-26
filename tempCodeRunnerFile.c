@@ -2,11 +2,11 @@
 #include <string.h>
 
 int main(void) {
-  char str[102];
-  int small, big, flag;
-  while (fgets(str, 102, stdin) && strcmp(str, ".\n")) {
-    small = 0, big = 0, flag = 1;
-    for (char *p = str; *p; p++) {
+  char str[101];
+  int small = 0, big = 0;
+  while (fgets(str, 101, stdin) && strcmp(str, ".")) {
+    small = 0, big = 0;
+    for (char *p = str; *p++;) {
       switch (*p) {
         case '(':
           small++;
@@ -22,11 +22,13 @@ int main(void) {
           break;
       }
       if (small < 0 || big < 0) {
-        flag = 0;
+        printf("no\n");
         break;
       }
     }
-    if (small || big) flag = 0;
-    printf("%s\n", flag ? "yes" : "no");
+    if (small == 0 && big == 0)
+      printf("yes\n");
+    else
+      printf("no\n");
   }
 }
