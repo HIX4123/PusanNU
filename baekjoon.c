@@ -1,32 +1,22 @@
+
 #include <stdio.h>
-#include <string.h>
+typedef struct student {
+  int id;
+  char *pname;
+  double points;
+} STUD;
 
 int main(void) {
-  char str[102];
-  int small, big, flag;
-  while (fgets(str, 102, stdin) && strcmp(str, ".\n")) {
-    small = 0, big = 0, flag = 1;
-    for (char *p = str; *p; p++) {
-      switch (*p) {
-        case '(':
-          small++;
-          break;
-        case ')':
-          small--;
-          break;
-        case '[':
-          big++;
-          break;
-        case ']':
-          big--;
-          break;
-      }
-      if (small < 0 || big < 0) {
-        flag = 0;
-        break;
-      }
-    }
-    if (small || big) flag = 0;
-    printf("%s\n", flag ? "yes" : "no");
+  int i;  // index
+  STUD pnucse[] = {{1, "Choi", 9.9}, {2, "Park", 0.1}, {3, "Kim", 5.0},
+                   {4, "Lee", 3.0},  {5, "Moon", 9.5}, {6, "Kang", 7.0},
+                   {7, "Jeon", 0.9}, {-1, NULL, 0}};
+
+  STUD *ptr = pnucse;
+
+  for (; ptr->id >= 0; ptr++) {
+    printf("[%d:%s] = %lf\n", ptr->id, ptr->pname, ptr->points);
   }
+
+  return 0;
 }
