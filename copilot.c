@@ -1,12 +1,20 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main(void) {
-  int dep = 10000000;
-  double rate = 2.2;
-  int yrs = 2;
+  char *str = (char *)malloc(sizeof(char) * 20);
+  strcpy(str, "1,2,3,4,5,6\n7,8,9.10");
+  puts(str);
 
-  printf("%d", (int)round(dep * pow(1 + rate, yrs) - dep));
+  int numOfNums = 1;
+  for (char *tmp = str; *tmp != '\0'; tmp++) {
+    if (*tmp == ',') {
+      numOfNums++;
+    } else if (*tmp == '\n') {
+      numOfNums++;
+      *tmp = ',';
+    }
+  }
+  printf("numOfNums: %d\n", numOfNums);
+  puts(str);
 }
