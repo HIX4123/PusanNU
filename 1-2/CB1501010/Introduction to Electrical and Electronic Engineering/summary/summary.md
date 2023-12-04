@@ -11,7 +11,7 @@ $x\left(t\right) = X_M \cos\left(\omega t + \theta\right)$
 - $X_M$ : 진폭 또는 최대값
 - $\omega = \dfrac{2\pi}{T} = 2\pi f$ : 각주파수
   - $T$ : 주기
-  - $f = \dfrac{1}{T}$ : 진동수
+  - $f = \dfrac{1}{T}$ : 주파수
   - $\theta$ : 위상
 
 ## 페이저와 복소수
@@ -43,8 +43,8 @@ $x\left(t\right) = X_M \cos\left(\omega t + \theta\right)$
 
 ![페이저 다이어그램](image.png)
 이렇게 생긴것
-진동수는 표기 불가
-$\therefore$ 페이저 도메인 $=$ 진동수 도메인
+주파수는 표기 불가
+$\therefore$ 페이저 도메인 $=$ 주파수 도메인
 
 ### 정현파-페이저 변환(sinusodial-phasor Transformation)
 
@@ -56,21 +56,21 @@ $\therefore$ 페이저 도메인 $=$ 진동수 도메인
 $V=IR$에 의해 전압과 전류는 위상이 같음
 
 - 시간 영역: $v = Ri$
-- 진동수 영역: $\bold{V} = R\bold{I}$
+- 주파수 영역: $\bold{V} = R\bold{I}$
 
 ### 인덕터에 대한 페이저 위상의 관계
 
 $V=L\dfrac{di}{dt}$에 의해 전압과 전류는 90도 위상차를 가짐 $\left(\phi_V=\phi_I + 90\degree\right)$
 
 - 시간 영역: $v = L\dfrac{di}{dt}$
-- 진동수 영역: $\bold{V} = j\omega L\bold{I}$
+- 주파수 영역: $\bold{V} = j\omega L\bold{I}$
 
 ### 커패시터에 대한 페이저 위상의 관계
 
 $V=\dfrac{1}{C}\int i\,dt$에 의해 전압과 전류는 90도 위상차를 가짐 $\left(\phi_I=\phi_V + 90\degree\right)$
 
 - 시간 영역: $v = C\dfrac{dv}{dt}$
-- 진동수 영역: $\bold{V} = \dfrac{\bold{I}}{j\omega C}$
+- 주파수 영역: $\bold{V} = \dfrac{\bold{I}}{j\omega C}$
 
 ## 임피던스와 어드미턴스
 
@@ -127,3 +127,15 @@ $V=\dfrac{1}{C}\int i\,dt$에 의해 전압과 전류는 90도 위상차를 가�
   - $Z=\dfrac{양쪽곱}{전부합}$
 - $Y\rightarrow\Delta$
   - $Z=\dfrac{복부호동합}{맞은편하나}$
+
+## 정현파 주파수 응답
+
+- 출력 응답 $\bold{V}_o = \dfrac{R}{j\omega L + \dfrac{1}{j\omega C} + R} \bold{V}_\bold{S}$
+- 주파수 변환 함수 $\dfrac{\bold{V}_o}{\bold{V}_\bold{S}}\left(j\omega\right) = \dfrac{j\omega\dfrac{R}{L}}{\left(j\omega\right)^2 + j\omega\dfrac{R}{L} + \dfrac{1}{LC}}$
+- 일반화 $\bold{G}\left(j\omega\right) = \dfrac{N\left(j\omega\right)}{D\left(j\omega\right)} = \dfrac{\sum_{m = 0}^{k}a_m\left(j\omega\right)^m}{\sum_{n = 0}^{k} b_n\left(j\omega\right)^n}$
+  - 특히 극좌표 또는 영좌표에서
+  $\bold{G}\left(j\omega\right) = K_0\frac{\prod_{m = 0}^{k}\left(j\omega-z_m\right)}{\prod_{n = 0}^{k}\left(j\omega-z_n\right)}$
+
+### 로우패스 네트워크(low-pass network)
+
+
