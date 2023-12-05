@@ -64,3 +64,29 @@
 ## 연속조건부분포(Continuous Conditional Distribution)
 
 - $f_{Y\mid X=x}\left(y\right) = \frac{f_{XY}\left(x,y\right)}{f_X\left(x\right)}$
+
+## 조건부 기댓값(Conditional Expectation)
+
+- $E\left[X\mid Y=y\right] = \sum\limits_{x\in\Omega_X}x\mathbb{P}\left(X=x\mid Y=y\right) = \sum\limits_{x\in\Omega_x}xp_{X,Y}\left(x\mid y\right)$
+
+## 총 기댓값의 법칙(Law of Total Expectation)
+
+$\mathbb{E}\left[g\left(X\right)\right]
+= \sum\limits_{y\in\Omega_Y}\mathbb{E}\left[g\left(X\right)\mid Y=y\right]\cdot p_Y\left(y\right)$
+$\mathbb{E}\left[g\left(X\right)\right] = \int_{-\infty}^{\infty}\mathbb{E}\left[g\left(X\right)\mid Y=y\right]\cdot f_Y\left(y\right)dy$
+
+## 공분산(Covariance)
+
+$\text{Cov}\left(X,Y\right)
+= \mathbb{E}\left[\left(X-\mathbb{E}\left[X\right]\right)\left(Y-\mathbb{E}\left[Y\right]\right)\right]
+= \mathbb{E}\left[XY\right] - \mathbb{E}\left[X\right]\mathbb{E}\left[Y\right]$
+
+### 공분산 행렬(Covariance Matrix)
+
+분산과 공분산을 나타낸 행렬
+$\begin{matrix}
+  &X&Y&Z\\
+X&\text{Var}\left(X\right)&\text{Cov}\left(X,Y\right)&\text{Cov}\left(X,Z\right)\\
+Y&\text{Cov}\left(Y,X\right)&\text{Var}\left(Y\right)&\text{Cov}\left(Y,Z\right)\\
+Z&\text{Cov}\left(Z,X\right)&\text{Cov}\left(Z,Y\right)&\text{Var}\left(Z\right)
+\end{matrix}$
