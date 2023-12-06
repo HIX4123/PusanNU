@@ -34,15 +34,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
-  FILE *fd = fopen("test.txt", "r+t");
-  fprintf(fd, "Hello, World!\naqwerty\nasdfgh\nzxcvbn");
-  char *str = (char *)malloc(100);
-  fseek(fd, 0, 0);
+// int main(void) {
+//   FILE *fd = fopen("test.txt", "r+t");
+//   fprintf(fd, "Hello, World!\naqwerty\nasdfgh\nzxcvbn");
+//   char *str = (char *)malloc(100);
+//   fseek(fd, 0, 0);
 
-  for (char *i = str; fgets(i, 100, fd) != NULL;)
-    while (*i++ != '\n')
-      ;
-      
-  puts(str);
+//   for (char *i = str; fgets(i, 100, fd) != NULL;)
+//     while (*i++ != '\n')
+//       ;
+
+//   puts(str);
+// }
+
+typedef struct {
+  int nums;
+  int size;
+} Numbers;
+
+int main(void) {
+  FILE *fd = fopen("test.bin", "wb");
+  Numbers nums = {100, 10};
+  fwrite(&nums, sizeof(Numbers), 1, fd);
+  fclose(fd);
+  FILE *fb = fopen("test.bin", "rb");
+  Numbers nums1;
+  fread(&nums1, sizeof(Numbers), 1, fb);
+  printf("%d %d", nums1.nums, nums1.size);
 }
