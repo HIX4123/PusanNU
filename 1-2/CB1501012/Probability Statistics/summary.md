@@ -19,8 +19,9 @@
   - $X \sim \text{Poi}(\lambda)$
   - 단위 시간당 평균 $\lambda$번 발생하는 사건이 단위 시간당 $k$번 발생할 확률을 나타내는 분포
 - 기하적 분포(Geometric)
-  - $X \sim \text{Geo}(p)$
+  - $X \sim \text{Geo}(p) = \left(1-p\right)^{k-1}p$
   - 베르누이 시행에서 처음으로 성공할 때까지의 시행 횟수를 나타내는 분포
+  - $E\left[X\right] = \dfrac{1}{p},\,\text{Var}\left(X\right) = \dfrac{1-p}{p^2}$
 
 ### 연속 분포(Continuous Distributions)
 
@@ -71,15 +72,21 @@
 
 ## 총 기댓값의 법칙(Law of Total Expectation)
 
-$\mathbb{E}\left[g\left(X\right)\right]
-= \sum\limits_{y\in\Omega_Y}\mathbb{E}\left[g\left(X\right)\mid Y=y\right]\cdot p_Y\left(y\right)$
-$\mathbb{E}\left[g\left(X\right)\right] = \int_{-\infty}^{\infty}\mathbb{E}\left[g\left(X\right)\mid Y=y\right]\cdot f_Y\left(y\right)dy$
+$E\left[g\left(X\right)\right]
+= \sum\limits_{y\in\Omega_Y}E\left[g\left(X\right)\mid Y=y\right]\cdot p_Y\left(y\right)$
+$E\left[g\left(X\right)\right] = \int_{-\infty}^{\infty}E\left[g\left(X\right)\mid Y=y\right]\cdot f_Y\left(y\right)dy$
 
 ## 공분산(Covariance)
 
 $\text{Cov}\left(X,Y\right)
-= \mathbb{E}\left[\left(X-\mathbb{E}\left[X\right]\right)\left(Y-\mathbb{E}\left[Y\right]\right)\right]
-= \mathbb{E}\left[XY\right] - \mathbb{E}\left[X\right]\mathbb{E}\left[Y\right]$
+= E\left[\left(X-E\left[X\right]\right)\left(Y-E\left[Y\right]\right)\right]
+= E\left[XY\right] - E\left[X\right]E\left[Y\right]$
+
+- $X\perp Y \Rightarrow \text{Cov}\left(X,Y\right) = 0$
+- $\text{Cov}\left(X,X\right) = \text{Var}\left(X\right)$
+- 대칭성: $\text{Cov}\left(X,Y\right) = \text{Cov}\left(Y,X\right)$
+- 비선형성: $\text{Cov}\left(aX+bY,Z\right) = a\text{Cov}\left(X,Z\right) + b\text{Cov}\left(Y,Z\right)\, \approx$ 분배법칙
+- 분산합: $\text{Var}\left(X+Y\right) = \text{Var}\left(X\right) + 2\text{Cov}\left(X,Y\right) + \text{Var}\left(Y\right)\,\approx$ 제곱의 합
 
 ### 공분산 행렬(Covariance Matrix)
 
@@ -90,3 +97,40 @@ X&\text{Var}\left(X\right)&\text{Cov}\left(X,Y\right)&\text{Cov}\left(X,Z\right)
 Y&\text{Cov}\left(Y,X\right)&\text{Var}\left(Y\right)&\text{Cov}\left(Y,Z\right)\\
 Z&\text{Cov}\left(Z,X\right)&\text{Cov}\left(Z,Y\right)&\text{Var}\left(Z\right)
 \end{matrix}$
+
+## 상관계수(Correlation Coefficient)
+
+$\rho\left(X, Y\right) = \dfrac{\text{Cov}\left(X,Y\right)}{\sigma_X\sigma_Y} \in \left[-1, 1\right]$
+
+## 모집단과 표본(Population and Sample)
+
+- 모집단 $N$: 관심 대상이 되는 모든 개체의 집합
+- 표본 $n$: 모집단의 부분집합
+
+## 표본평균과 표본분산(Sample Mean and Variance)
+
+$\begin{matrix}
+  &\text{Population}&\text{Sample}\\
+\text{Mean}&\mu = E\left[X\right]&\bar{x} = \dfrac{1}{n}\sum\limits_{i=1}^nx_i\\
+\text{Variance}&\sigma^2 = \text{Var}\left(X\right)&s^2 = \dfrac{1}{n-1}\sum\limits_{i=1}^n\left(x_i-\bar{x}\right)^2
+\end{matrix}$
+
+## 큰 수의 법칙(Law of Large Numbers)
+
+- 표본의 크기가 커질수록 표본평균이 모평균에 가까워짐
+
+## 독립동일분포확률변수(Independent and Identically Distributed Random Variables)
+
+$X_1\perp X_2\perp \cdots\perp X_n,\,X_1 \sim X_2 \sim \cdots \sim X_n\\\Rightarrow X_1, X_2, \cdots, X_n \sim \text{iid}$
+
+## 중심극한정리(Central Limit Theorem)
+
+$X_1, X_2, \cdots, X_n \sim \text{iid},\,E\left[X_i\right] = \mu,\,\text{Var}\left(X_i\right) = \sigma^2\\$
+
+$\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu, \dfrac{\sigma^2}{n}\right)$
+
+- $\sum\limits_{i=1}^n X_i\sim N\left(n\mu, n\sigma^2\right)$
+- Binomial RV
+  - $X \sim \text{Bin}\left(n, p\right) \Rightarrow X \sim \text{N}\left(np, np\left(1-p\right)\right)$
+- Uniform RV
+  - $X \sim \text{Unif}\left(a, b\right) \Rightarrow X \sim \text{N}\left(\dfrac{a+b}{2}, \dfrac{\left(b-a\right)^2}{12}\right)$
