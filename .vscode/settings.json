@@ -21,6 +21,9 @@
   "peacock.color": "#001933",
   "files.associations": {
     "stdlib.h": "c",
-    "assert.h": "c"
+    "assert.h": "c",
+    "unistd.h": "c",
+    "string.h": "c",
+    "stdio.h": "c"
   }
 }

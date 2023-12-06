@@ -134,3 +134,4 @@ $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu
   - $X \sim \text{Bin}\left(n, p\right) \Rightarrow X \sim \text{N}\left(np, np\left(1-p\right)\right)$
 - Uniform RV
   - $X \sim \text{Unif}\left(a, b\right) \Rightarrow X \sim \text{N}\left(\dfrac{a+b}{2}, \dfrac{\left(b-a\right)^2}{12}\right)$
+
