@@ -195,16 +195,16 @@ servo.write(각도);
 
 ![L293D 모터 드라이버 칩](image-9.png)
 
-|L293D 핀(왼쪽↓)|L293D 핀(오른쪽↑)|모터 핀|
-|---|---|---|
-|EN1|EN2|모터 활성화|
-|IN1|IN3|속도 제어|
-|OUT1|OUT3|모터 연결|
-|GND, GND|GND, GND|GND|
-|OUT2|OUT4|모터 연결|
-|IN2|IN4|방향 제어|
-|V~MOTOR~||모터 전원|
-||VCC|칩 전원|
+| L293D 핀(왼쪽↓) | L293D 핀(오른쪽↑) | 모터 핀     |
+| --------------- | ----------------- | ----------- |
+| EN1             | EN2               | 모터 활성화 |
+| IN1             | IN3               | 속도 제어   |
+| OUT1            | OUT3              | 모터 연결   |
+| GND, GND        | GND, GND          | GND         |
+| OUT2            | OUT4              | 모터 연결   |
+| IN2             | IN4               | 방향 제어   |
+| V~MOTOR~        |                   | 모터 전원   |
+|                 | VCC               | 칩 전원     |
 
 ![Alt text](image-10.png)
 
@@ -232,4 +232,229 @@ void loop() {
 
 하나의 펄스가 주어지면 분할각 단위로 회전
 
-##UART
+## 시리얼 통신
+
+||UART|SPI|I2C|
+|---|---|---|---|
+|동기 방식|Async|Sync|Sync|
+|전송 방식|전이중|전이중|반이중|
+|전송 방향|1:1|1:n|1:n|
+|슬레이브 선택|`SoftwareSerial.h`|HW(`SPI.h`)|SW(`Wire.h`)|
+|데이터 연결선|2|2|1|
+|클럭 연결선|X|1|1|
+|제어 연결선|X|1|X|
+|총 연결선|2n|3+n|2|
+
+### UART; NETWORK
+
+![UART](image-11.png)
+
+- Universal
+  - 여러 프로토콜과 호환
+  - RS-232, RS-422, RS-485, USB, FireWire, CAN, LIN, Ethernet, Bluetooth, IrDA, 802.11, etc.
+- Asynchronous
+  - 별도의 클럭 신호 없이 데이터를 전송
+- Receiver
+- Transmitter
+- 하드웨어 지원
+- TTL(Transistor-Transistor Logic) 사용
+  - Mega: 5V 기준
+- 1:1 통신
+- Serial, Serial1~3이 미리 정의되어 있음
+  |채널|핀|객체|
+  |---|---|---|
+  |Serial|0(RX), 1(TX)|Serial|
+  |Serial1|19(RX), 18(TX)|Serial1|
+  |Serial2|17(RX), 16(TX)|Serial2|
+  |Serial3|15(RX), 14(TX)|Serial3|
+- 객체 생성 X
+
+#### SoftwareSerial 라이브러리
+
+- UART 에뮬레이터
+- Uno: 1개까지
+  - 프로그램 업로드에 사용
+  - 흔히 사용됨
+- Mega: 4개까지
+  - 흔히 사용되지 않음
+
+Ping 통신
+
+```ino
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(핀1, 핀2); // RX, TX 교차
+
+// Serial처럼 사용
+```
+
+Pong 통신
+
+```ino
+void setup() {
+  Serial1.begin(9600);
+}
+
+// Serial처럼 사용
+```
+
+### SPI; NETWORK
+
+![SPI](image-12.png)
+
+- Serial
+- Peripheral
+- Interface
+- 1:n 통신
+- 4개의 핀 사용
+  - SCK: Serial Clock
+    - 동기 통신을 위한 클럭 신호
+    - 전용 핀: 51
+  - MOSI: Master Out Slave In
+    - 마스터에서 슬레이브로 데이터 전송
+    - 전용 핀: 50
+  - MISO: Master In Slave Out
+    - 슬레이브에서 마스터로 데이터 전송
+    - 전용 핀: 52
+  - SS: Slave Select
+    - 슬레이브 선택
+    - 자유 핀 (53)
+
+마스터
+
+```ino
+#include <SPI.h>
+
+void setup() {
+  SPI.begin();
+  SPI.setClockDivider(SPI_CLOCK_DIV16); // 16MHz / 16 = 1MHz
+  // SPI.setDataMode(SPI_MODE0); // CPOL = 0, CPHA = 0
+}
+
+SPI.transfer(데이터);
+```
+
+슬레이브
+
+```ino
+#include <SPI.h>
+
+volatile byte pos = 0;
+volatile boolean process_it = false;
+// volatile: 컴파일러가 최적화하지 않도록 함
+
+void setup() {
+  SPI.begin();
+
+  // pinMode(MISO, OUTPUT);
+  // pinMode(SCK, INPUT);
+  // pinMode(MOSI, INPUT);
+  // pinMode(SS, INPUT);
+
+  SPI.setClockDivider(SPI_CLOCK_DIV16);
+
+  SPCR |= 1 << SPE; // SPI 활성화
+  SPCR &= ~(1 << MSTR); // 슬레이브 모드
+  SPCR |= 1 << SPIE; // SPI 인터럽트 활성화
+}
+
+ISR(SPI_STC_vect) {
+  byte c = SPDR;
+  if(pos < sizeof(buf)) {
+    buf[pos++] = c;
+    if(c == '\n') {
+      process_it = true;
+    }
+  }
+}
+
+void loop() {
+  if(process_it) {
+    buf[pos] = '\0';
+    Serial.println(buf);
+
+    pos = 0;
+    process_it = false;
+  }
+}
+```
+
+### I2C; NETWORK
+
+![I2C](image-13.png)
+
+- Inter
+- Integrated
+- Circuit
+- 1:n
+- 2개의 핀 사용
+  - SCL: Serial Clock
+    - 동기 통신을 위한 클럭 신호
+  - SDA: Serial Data
+    - 데이터 전송 (양방향)
+- 슬레이브 주소
+  - 소프트웨어적으로 설정
+  - 추가 연결선 필요없음
+
+#### Wire 라이브러리
+
+- 마스터 슬레이브 모두 지원
+  - 마스터
+    - 송신: beginTransmission(), write(), endTransmission()
+    - 수신: requestFrom(), available(), read()
+  - 슬레이브
+    - 수신: onReceive()
+    - 송신: onRequest()
+
+마스터
+
+```ino
+#include <Wire.h>
+
+#define SLAVE 4
+
+void setup() {
+  Wire.begin();
+}
+
+void I2C_communication() {
+  Wire.beginTransmission(SLAVE);
+  Wire.write(8비트 데이터 >> 8);
+  Wire.write(8비트 데이터 & 0xFF);
+  Wire.endTransmission(SLAVE);
+}
+```
+
+슬레이브
+
+```ino
+#include <Wire.h>
+
+#define SLAVE 4
+
+void setup() {
+  Wire.begin(SLAVE);
+  Wire.onReceive(receiveFromMaster);
+}
+
+void receiveFromMaster(int bytes) {
+  byte r1 = Wire.read();
+  byte r2 = Wire.read();
+
+  int value = (r1 << 8) | r2;
+}
+```
+
+||UART|SPI|I2C|
+|---|---|---|---|
+|동기 방식|Async|Sync|Sync|
+|전송 방식|전이중|전이중|반이중|
+|전송 방향|1:1|1:n|1:n|
+|슬레이브 선택|`SoftwareSerial.h`|HW(`SPI.h`)|SW(`Wire.h`)|
+|데이터 연결선|2|2|1|
+|클럭 연결선|X|1|1|
+|제어 연결선|X|1|X|
+|총 연결선|2n|3+n|2|
+
+## 적외선 센서; INPUT
+
