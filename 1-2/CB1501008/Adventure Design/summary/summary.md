@@ -480,7 +480,7 @@ void receiveFromMaster(int bytes) {
 
 ![적외선 센서](image-14.png)
 
-- Passive InfRared(PIR) Motion Sensor
+- Passive InfraRed(PIR) Motion Sensor
 - Fresnel Lens로 적외선 집광
 
 ```ino
