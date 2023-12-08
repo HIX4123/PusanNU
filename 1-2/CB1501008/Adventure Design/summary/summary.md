@@ -38,6 +38,9 @@ noTone(핀);
 
 ![조도 센서](image-2.png)
 
+- `analogRead(핀)` : 0~1023
+- $\rightarrow$ $V$: `map(analogRead(핀), 0, 1023, 0, 5);`
+
 ### CdS(황화 카드뮴) 셀
 
 - $광량 \propto \dfrac{1}{저항}$
