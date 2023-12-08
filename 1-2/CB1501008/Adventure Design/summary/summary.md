@@ -217,7 +217,7 @@ servo.write(각도);
 
 ![Alt text](image-10.png)
 
-```ino
+```**ino**
 const int ENABLE = 38;
 const int PWM = 9;
 const int DIR = 39;
