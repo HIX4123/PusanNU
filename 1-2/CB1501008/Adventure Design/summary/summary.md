@@ -323,13 +323,13 @@ void setup() {
 - 4개의 핀 사용
   - SCK: Serial Clock
     - 동기 통신을 위한 클럭 신호
-    - 전용 핀: 51
+    - 전용 핀: 52
   - MOSI: Master Out Slave In
     - 마스터에서 슬레이브로 데이터 전송
-    - 전용 핀: 50
+    - 전용 핀: 51
   - MISO: Master In Slave Out
     - 슬레이브에서 마스터로 데이터 전송
-    - 전용 핀: 52
+    - 전용 핀: 50
   - SS: Slave Select
     - 슬레이브 선택
     - 자유 핀 (53)
