@@ -234,16 +234,16 @@ void loop() {
 
 ## 시리얼 통신
 
-||UART|SPI|I2C|
-|---|---|---|---|
-|동기 방식|Async|Sync|Sync|
-|전송 방식|전이중|전이중|반이중|
-|전송 방향|1:1|1:n|1:n|
-|슬레이브 선택|`SoftwareSerial.h`|HW(`SPI.h`)|SW(`Wire.h`)|
-|데이터 연결선|2|2|1|
-|클럭 연결선|X|1|1|
-|제어 연결선|X|1|X|
-|총 연결선|2n|3+n|2|
+|               | UART               | SPI         | I2C          |
+| ------------- | ------------------ | ----------- | ------------ |
+| 동기 방식     | Async              | Sync        | Sync         |
+| 전송 방식     | 전이중             | 전이중      | 반이중       |
+| 전송 방향     | 1:1                | 1:n         | 1:n          |
+| 슬레이브 선택 | `SoftwareSerial.h` | HW(`SPI.h`) | SW(`Wire.h`) |
+| 데이터 연결선 | 2                  | 2           | 1            |
+| 클럭 연결선   | X                  | 1           | 1            |
+| 제어 연결선   | X                  | 1           | X            |
+| 총 연결선     | 2n                 | 3+n         | 2            |
 
 ### UART; NETWORK
 
@@ -445,16 +445,132 @@ void receiveFromMaster(int bytes) {
 }
 ```
 
-||UART|SPI|I2C|
-|---|---|---|---|
-|동기 방식|Async|Sync|Sync|
-|전송 방식|전이중|전이중|반이중|
-|전송 방향|1:1|1:n|1:n|
-|슬레이브 선택|`SoftwareSerial.h`|HW(`SPI.h`)|SW(`Wire.h`)|
-|데이터 연결선|2|2|1|
-|클럭 연결선|X|1|1|
-|제어 연결선|X|1|X|
-|총 연결선|2n|3+n|2|
+|               | UART               | SPI         | I2C          |
+| ------------- | ------------------ | ----------- | ------------ |
+| 동기 방식     | Async              | Sync        | Sync         |
+| 전송 방식     | 전이중             | 전이중      | 반이중       |
+| 전송 방향     | 1:1                | 1:n         | 1:n          |
+| 슬레이브 선택 | `SoftwareSerial.h` | HW(`SPI.h`) | SW(`Wire.h`) |
+| 데이터 연결선 | 2                  | 2           | 1            |
+| 클럭 연결선   | X                  | 1           | 1            |
+| 제어 연결선   | X                  | 1           | X            |
+| 총 연결선     | 2n                 | 3+n         | 2            |
 
 ## 적외선 센서; INPUT
 
+![적외선 센서](image-14.png)
+
+- Passive InfRared(PIR) Motion Sensor
+- Fresnel Lens로 적외선 집광
+
+```ino
+const int motionPin = 8;
+
+void setup() {
+  pinMode(motionPin, INPUT);
+}
+
+void loop() {
+  if(digitalRead(motionPin) == HIGH) {
+    // 움직임 감지
+  }
+}
+
+```
+
+### HC-SR501 PIR 센서
+
+- 조절기
+  - Time Delay: 딜레이(5s ~ 5min, 시계 증가)
+  - Sensitivity: 감도(3m ~ 7m, 반시계 증가)
+  - Trigger Mode: 트리거 모드(Repeatable(아래), Non-repeatable(위))
+
+## 초음파 센서
+
+![초음파 센서](image-15.png)
+VCC, 수신, 송신, GND
+
+- 초음파를 이용하여 거리 측정
+- $d = 340t \cdot \dfrac{1}{2}$
+
+```ino
+const int trigPin = 3;
+const int echoPin = 2;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, HIGH);
+  delay(10);
+  digitalWrite(trigPin, LOW);
+
+  float duration = pulseIn(echoPin, HIGH);
+  float distance = duration * 0.034 / 2;
+}
+```
+
+- `pulseIn(핀, HIGH)` : HIGH가 되는 시간을 반환
+
+## 가속도 센서
+
+![가속도 센서](image-16.png)
+
+### ADXL345
+
+- 3축 가속도 센서
+- SPI, I2C 지원
+
+```ino
+#include <ADXL345.h>
+#include <Wire.h>
+
+ADXL345 adxl;
+
+void setupADXL() {
+  adxl.powerOn();
+  adxl.setActivityThreshold(75);
+  adxl.setInactivityThreshold(75);
+  adxl.setTimeInactivity(10);
+  adxl.setActivityX(1);
+  adxl.setActivityY(1);
+  adxl.setActivityZ(1);
+  adxl.setInactivityX(1);
+  adxl.setInactivityY(1);
+  adxl.setInactivityZ(1);
+  adxl.setTapDetectionOnX(0);
+  adxl.setTapDetectionOnY(0);
+  adxl.setTapDetectionOnZ(1);
+  adxl.setTapThreshold(50);
+  adxl.setTapDuration(15);
+  adxl.setDoubleTapLatency(80);
+  adxl.setDoubleTapWindow(200);
+  adxl.setFreeFallThreshold(7);
+  adxl.setFreeFallDuration(45);
+  adxl.setInterruptMapping(ADXL345_INT_SINGLE_TAP_BIT, ADXL345_INT1_PIN);
+  adxl.setInterruptMapping(ADXL345_INT_DOUBLE_TAP_BIT, ADXL345_INT1_PIN);
+  adxl.setInterruptMapping(ADXL345_INT_FREE_FALL_BIT, ADXL345_INT1_PIN);
+  adxl.setInterruptMapping(ADXL345_INT_ACTIVITY_BIT, ADXL345_INT1_PIN);
+  adxl.setInterruptMapping(ADXL345_INT_INACTIVITY_BIT, ADXL345_INT1_PIN);
+  adxl.setInterrupt(ADXL345_INT_SINGLE_TAP_BIT, 1);
+  adxl.setInterrupt(ADXL345_INT_DOUBLE_TAP_BIT, 1);
+  adxl.setInterrupt(ADXL345_INT_FREE_FALL_BIT, 1);
+  adxl.setInterrupt(ADXL345_INT_ACTIVITY_BIT, 1);
+  adxl.setInterrupt(ADXL345_INT_INACTIVITY_BIT, 1);
+}
+
+void loop() {
+  // xyz 값 읽기
+  int x, y, z;
+  adxl.readXYZ(&x, &y, &z);
+
+  // interrupt 감지
+  byte interrupts = adxl.getInterruptSource();
+
+  // 가속도 감지
+  double xyz[3];
+  adxl.getAcceleration(xyz);
+}
+```
