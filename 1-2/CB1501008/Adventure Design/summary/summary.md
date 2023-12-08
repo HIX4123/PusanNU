@@ -232,7 +232,7 @@ void setup() {
 
 void loop() {
   digitalWrite(DIR, HIGH);
-  analogWrite(PWM, 255); // -255 ~ 255
+  analogWrite(PWM, 255);
   delay(1000);
 }
 ```
