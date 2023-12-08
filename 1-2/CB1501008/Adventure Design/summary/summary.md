@@ -11,7 +11,7 @@
   - duty cycle : PWM 신호에서 high level이 차지하는 비율
 
 ```ino
-tone(핀, 주파수, /*지속시간*/); // AnalogWrite()는 주파수 조절 불가
+tone(핀, 주파수, /*지속시간*/); // analogWrite()는 주파수 조절 불가
 delay(지속시간);
 noTone(핀);
 ```
@@ -43,6 +43,8 @@ noTone(핀);
 - $광량 \propto \dfrac{1}{저항}$
 - 저렴하고 간단
 - 느리고 부정확
+
+---
 
 ## 7세그먼트; OUTPUT
 
@@ -153,6 +155,8 @@ lcd.clear();
 - 컨트롤러: 컨트롤러
 - Power 회로: 전원 회로
 
+---
+
 ## 서보 모터; OUTPUT
 
 ![Alt text](image-7.png)
@@ -177,6 +181,8 @@ servo.write(각도);
 - 최대 제어 가능 서보모터 수
   - Arduino Uno: 12개
   - Arduino Mega: 48개
+
+---
 
 ## DC 모터; OUTPUT
 
@@ -228,9 +234,13 @@ void loop() {
 }
 ```
 
+---
+
 ## 스텝 모터; OUTPUT
 
 하나의 펄스가 주어지면 분할각 단위로 회전
+
+---
 
 ## 시리얼 통신
 
@@ -244,6 +254,8 @@ void loop() {
 | 클럭 연결선   | X                  | 1           | 1            |
 | 제어 연결선   | X                  | 1           | X            |
 | 총 연결선     | 2n                 | 3+n         | 2            |
+
+---
 
 ### UART; NETWORK
 
@@ -297,6 +309,8 @@ void setup() {
 
 // Serial처럼 사용
 ```
+
+---
 
 ### SPI; NETWORK
 
@@ -379,6 +393,8 @@ void loop() {
 }
 ```
 
+---
+
 ### I2C; NETWORK
 
 ![I2C](image-13.png)
@@ -445,6 +461,8 @@ void receiveFromMaster(int bytes) {
 }
 ```
 
+---
+
 |               | UART               | SPI         | I2C          |
 | ------------- | ------------------ | ----------- | ------------ |
 | 동기 방식     | Async              | Sync        | Sync         |
@@ -455,6 +473,8 @@ void receiveFromMaster(int bytes) {
 | 클럭 연결선   | X                  | 1           | 1            |
 | 제어 연결선   | X                  | 1           | X            |
 | 총 연결선     | 2n                 | 3+n         | 2            |
+
+---
 
 ## 적외선 센서; INPUT
 
@@ -485,6 +505,8 @@ void loop() {
   - Sensitivity: 감도(3m ~ 7m, 반시계 증가)
   - Trigger Mode: 트리거 모드(Repeatable(아래), Non-repeatable(위))
 
+---
+
 ## 초음파 센서
 
 ![초음파 센서](image-15.png)
@@ -513,6 +535,8 @@ void loop() {
 ```
 
 - `pulseIn(핀, HIGH)` : HIGH가 되는 시간을 반환
+
+---
 
 ## 가속도 센서
 
