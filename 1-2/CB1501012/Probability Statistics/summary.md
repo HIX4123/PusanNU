@@ -135,3 +135,12 @@ $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu
 - Uniform RV
   - $X \sim \text{Unif}\left(a, b\right) \Rightarrow X \sim \text{N}\left(\dfrac{a+b}{2}, \dfrac{\left(b-a\right)^2}{12}\right)$
 
+## 정규분포(Normal Distribution)
+
+- $f_X\left(x\right) = \dfrac{1}{\sqrt{2\pi}\sigma}\exp\left(-\dfrac{\left(x-\mu\right)^2}{2\sigma^2}\right)$
+
+## 이변량정규분포(Bivariate Normal Distribution)
+
+- $f_{XY}\left(x, y\right) = f_X\left(h\right)f_W\left(w\right)$
+- $X\perp Y \Rightarrow f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y}\exp\left(-\dfrac{1}{2}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2}\right)\right)$
+- $X\not\perp Y \Rightarrow f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2} - \dfrac{2\rho\left(x-\mu_X\right)\left(y-\mu_Y\right)}{\sigma_X\sigma_Y}\right)\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{x-\mu_x}{\sigma_X}-\dfrac{y-\mu_y}{\sigma_Y} \right)^2\right)$
