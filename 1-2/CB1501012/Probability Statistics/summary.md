@@ -35,10 +35,14 @@
   - $X \sim \text{N}(\mu, \sigma^2)$
   - 평균이 $\mu$이고 분산이 $\sigma^2$인 분포
 
+---
+
 ## 집합의 데카르트곱(Cartesian Product of Sets)
 
 - $A \times B = \{(a, b) \mid a \in A, b \in B\}$
 - ex) $A = \{1, 2\}, B = \{a, b\} \Rightarrow A \times B = \{(1, a), (1, b), (2, a), (2, b)\}$
+
+---
 
 ## 결합확률질량함수(Joint PMFs)
 
@@ -47,34 +51,48 @@
 - 결합범위 $\Omega_{X\times Y}\{\left(c, d\right): p_{X, Y}\left(c, d\right) > 0\} \subseteq \Omega_X\times\Omega_Y$
 - $E\left[g\left(X,Y\right)\right] = \sum\limits_x\sum\limits_y g\left(x,y\right)\cdot p_{X,Y}\left(x,y\right)$
 
+---
+
 ## 주변확률질량함수(Marginal PMFs)
 
 - 결합확률질량함수에서 하나의 확률변수에 대한 확률질량함수
 - $p_X\left(a\right) = \sum\limits_{b\in\Omega_Y}p_{X,Y}\left(a,b\right)$
   - $x = a$일 때, $y$의 모든 값에 대한 확률을 더함
 
+---
+
 ## 독립(Independence)
 
 - 두 확률변수 $X$와 $Y$가 독립이라는 것은 $X$의 값이 $x$일 때 $Y$의 값이 $y$일 확률이 $X$의 값이 $x$일 때 $Y$의 값이 $y$일 조건부 확률과 같다는 것을 의미
 - $p_{X,Y}\left(x,y\right) = p_X\left(x\right)p_Y\left(y\right)$
 
+---
+
 ## 이산조건부분포(Discrete Conditional Distribution)
 
 - $P\left(E\mid F\right) = \frac{P\left(E\cap F\right)}{P\left(F\right)} = \frac{P\left(EF\right)}{P\left(F\right)}$
+
+---
 
 ## 연속조건부분포(Continuous Conditional Distribution)
 
 - $f_{Y\mid X=x}\left(y\right) = \frac{f_{XY}\left(x,y\right)}{f_X\left(x\right)}$
 
+---
+
 ## 조건부 기댓값(Conditional Expectation)
 
 - $E\left[X\mid Y=y\right] = \sum\limits_{x\in\Omega_X}x\mathbb{P}\left(X=x\mid Y=y\right) = \sum\limits_{x\in\Omega_x}xp_{X,Y}\left(x\mid y\right)$
+
+---
 
 ## 총 기댓값의 법칙(Law of Total Expectation)
 
 $E\left[g\left(X\right)\right]
 = \sum\limits_{y\in\Omega_Y}E\left[g\left(X\right)\mid Y=y\right]\cdot p_Y\left(y\right)$
 $E\left[g\left(X\right)\right] = \int_{-\infty}^{\infty}E\left[g\left(X\right)\mid Y=y\right]\cdot f_Y\left(y\right)dy$
+
+---
 
 ## 공분산(Covariance)
 
@@ -98,14 +116,18 @@ Y&\text{Cov}\left(Y,X\right)&\text{Var}\left(Y\right)&\text{Cov}\left(Y,Z\right)
 Z&\text{Cov}\left(Z,X\right)&\text{Cov}\left(Z,Y\right)&\text{Var}\left(Z\right)
 \end{matrix}$
 
+---
+
 ## 상관계수(Correlation Coefficient)
 
-$\rho\left(X, Y\right) = \dfrac{\text{Cov}\left(X,Y\right)}{\sigma_X\sigma_Y} \in \left[-1, 1\right]$
+## $\rho\left(X, Y\right) = \dfrac{\text{Cov}\left(X,Y\right)}{\sigma_X\sigma_Y} \in \left[-1, 1\right]$
 
 ## 모집단과 표본(Population and Sample)
 
 - 모집단 $N$: 관심 대상이 되는 모든 개체의 집합
 - 표본 $n$: 모집단의 부분집합
+
+---
 
 ## 표본평균과 표본분산(Sample Mean and Variance)
 
@@ -115,13 +137,17 @@ $\begin{matrix}
 \text{Variance}&\sigma^2 = \text{Var}\left(X\right)&s^2 = \dfrac{1}{n-1}\sum\limits_{i=1}^n\left(x_i-\bar{x}\right)^2
 \end{matrix}$
 
+---
+
 ## 큰 수의 법칙(Law of Large Numbers)
 
 - 표본의 크기가 커질수록 표본평균이 모평균에 가까워짐
 
+---
+
 ## 독립동일분포확률변수(Independent and Identically Distributed Random Variables)
 
-$X_1\perp X_2\perp \cdots\perp X_n,\,X_1 \sim X_2 \sim \cdots \sim X_n\\\Rightarrow X_1, X_2, \cdots, X_n \sim \text{iid}$
+## $X_1\perp X_2\perp \cdots\perp X_n,\,X_1 \sim X_2 \sim \cdots \sim X_n\\\Rightarrow X_1, X_2, \cdots, X_n \sim \text{iid}$
 
 ## 중심극한정리(Central Limit Theorem)
 
@@ -135,12 +161,42 @@ $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu
 - Uniform RV
   - $X \sim \text{Unif}\left(a, b\right) \Rightarrow X \sim \text{N}\left(\dfrac{a+b}{2}, \dfrac{\left(b-a\right)^2}{12}\right)$
 
+---
+
 ## 정규분포(Normal Distribution)
 
 - $f_X\left(x\right) = \dfrac{1}{\sqrt{2\pi}\sigma}\exp\left(-\dfrac{\left(x-\mu\right)^2}{2\sigma^2}\right)$
 
+---
+
 ## 이변량정규분포(Bivariate Normal Distribution)
 
-- $f_{XY}\left(x, y\right) = f_X\left(h\right)f_W\left(w\right)$
-- $X\perp Y \Rightarrow f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y}\exp\left(-\dfrac{1}{2}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2}\right)\right)$
-- $X\not\perp Y \Rightarrow f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2} - \dfrac{2\rho\left(x-\mu_X\right)\left(y-\mu_Y\right)}{\sigma_X\sigma_Y}\right)\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{x-\mu_x}{\sigma_X}-\dfrac{y-\mu_y}{\sigma_Y} \right)^2\right)$
+- $X\perp Y$
+  - $f_{XY}\left(x, y\right) = f_X\left(x\right)f_W\left(**y**\right)$
+  - $f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y}\exp\left(-\dfrac{1}{2}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2}\right)\right)$
+- $X\not\perp Y$
+
+  - $\boldsymbol{X}\sim N\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)$
+    - $\boldsymbol{X}$: 벡터
+    - $\boldsymbol{\mu}$: 평균 벡터
+    - $\boldsymbol{\Sigma}$: 공분산 행렬
+  - $f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2} - \dfrac{2\rho\left(x-\mu_X\right)\left(y-\mu_Y\right)}{\sigma_X\sigma_Y}\right)\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{x-\mu_x}{\sigma_X}-\dfrac{y-\mu_y}{\sigma_Y} \right)^2\right)$
+
+- 모수적 모형(Parametric Model)
+  - 모집단의 분포를 정규분포로 가정
+  - 분포 $=$ 모델 $+$ 파라미터 $\theta$
+
+---
+
+## 점추정(Point Estimation)
+
+- 모수 $\theta$의 값을 추정하는 것
+
+---
+
+## 최대가능도추정(Maximum Likelihood Estimation, MLE)
+
+- 가능도 함수(Likelihood Function): $L\left(\theta\mid x\right) = f\left(x\mid\theta\right)$
+- 최대가능도추정(Maximum Likelihood Estimation): $\hat{\theta}_{MLE} = \underset{\theta}{\text{argmax}}\,L\left(\theta\mid x\right)$
+- $\hat{\theta}_{MLE}$: $\theta$의 최대가능도추정량(Maximum Likelihood Estimator)
+
