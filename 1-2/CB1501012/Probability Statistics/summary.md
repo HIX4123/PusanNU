@@ -16,8 +16,9 @@
   - $X \sim \text{Bin}(n, p)$
   - $n$번의 베르누이 시행을 했을 때, $p$의 확률로 1을 가지는 횟수를 나타내는 분포
 - 푸아송 분포(Poisson)
-  - $X \sim \text{Poi}(\lambda)$
+  - $X \sim \text{Poi}(\lambda) = \dfrac{\lambda^xe^{-\lambda}}{x!}$
   - 단위 시간당 평균 $\lambda$번 발생하는 사건이 단위 시간당 $k$번 발생할 확률을 나타내는 분포
+  - $E\left[X\right] = \lambda,\,\text{Var}\left(X\right) = \lambda$
 - 기하적 분포(Geometric)
   - $X \sim \text{Geo}(p) = \left(1-p\right)^{k-1}p$
   - 베르누이 시행에서 처음으로 성공할 때까지의 시행 횟수를 나타내는 분포
@@ -147,7 +148,7 @@ $\begin{matrix}
 
 ## 독립동일분포확률변수(Independent and Identically Distributed Random Variables)
 
-## $X_1\perp X_2\perp \cdots\perp X_n,\,X_1 \sim X_2 \sim \cdots \sim X_n\\\Rightarrow X_1, X_2, \cdots, X_n \sim \text{iid}$
+$X_1\perp X_2\perp \cdots\perp X_n,\,X_1 \sim X_2 \sim \cdots \sim X_n\\\Rightarrow X_1, X_2, \cdots, X_n \sim \text{iid}$
 
 ## 중심극한정리(Central Limit Theorem)
 
@@ -196,7 +197,25 @@ $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu
 
 ## 최대가능도추정(Maximum Likelihood Estimation, MLE)
 
-- 가능도 함수(Likelihood Function): $L\left(\theta\mid x\right) = f\left(x\mid\theta\right)$
+<!-- - 가능도 함수(Likelihood Function): $L\left(\theta\mid x\right) = f\left(x\mid\theta\right)$
 - 최대가능도추정(Maximum Likelihood Estimation): $\hat{\theta}_{MLE} = \underset{\theta}{\text{argmax}}\,L\left(\theta\mid x\right)$
-- $\hat{\theta}_{MLE}$: $\theta$의 최대가능도추정량(Maximum Likelihood Estimator)
+- $\hat{\theta}_{MLE}$: $\theta$의 최대가능도추정량(Maximum Likelihood Estimator) -->
+$X_1, X_2, \cdots, X_n \sim \text{iid}$
 
+- 가능도 함수(Likelihood Function): $L\left(X_1, X_2, \cdots, X_n\mid\theta\right) = \prod\limits_{i=1}^nf\left(X_i\mid\theta\right)$
+- 최대가능도추정(Maximum Likelihood Estimation): $\hat{\theta}_{MLE} = \underset{\theta}{\argmax}\,L\left(X_1, X_2, \cdots, X_n\mid\theta\right)$
+  - $\hat{x}\argmax$: 최대값을 가지게 하는 값
+- 보통 미분해서 계산하기 때문에 후술할 LLF를 사용
+
+### 로그가능도함수(Log Likelihood Function)
+
+- $\theta_{MLE} = \underset{\theta}{\argmax}\,L\left(\theta\mid x\right) = \underset{\theta}{\argmax}\,LL\left(\theta\right)$
+
+## 선형회귀(Linear Regression)
+
+- 데이터의 분포를 가장 잘 설명하는 선형함수를 찾는 것
+
+## 최대사후확률추정(Maximum A Posteriori Estimation, MAP)
+
+- 최빈값을 찾는 것
+- 사후확률(Posterior Probability): $P\left(\theta\mid x\right) = \dfrac{P\left(x\mid\theta\right)P\left(\theta\right)}{P\left(x\right)}$
