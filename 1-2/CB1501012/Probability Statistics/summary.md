@@ -30,7 +30,7 @@
   - $X \sim \text{Unif}(a, b)$
   - $a$와 $b$ 사이의 모든 값이 나올 확률이 동일한 분포
 - 지수 분포(Exponential)
-  - $X \sim \text{Exp}(\lambda)$
+  - $X \sim \text{Exp}(\lambda) = \lambda e^{-\lambda x}$
   - 단위 시간당 평균 $\lambda$번 발생하는 사건(푸아송 과정)이 단위 시간당 $t$ 시간 이내에 발생할 확률을 나타내는 분포
 - 정규 분포(Normal)
   - $X \sim \text{N}(\mu, \sigma^2)$
@@ -71,13 +71,13 @@
 
 ## 이산조건부분포(Discrete Conditional Distribution)
 
-- $P\left(E\mid F\right) = \frac{P\left(E\cap F\right)}{P\left(F\right)} = \frac{P\left(EF\right)}{P\left(F\right)}$
+- $P\left(E\mid F\right) = \dfrac{P\left(E\cap F\right)}{P\left(F\right)} = \dfrac{P\left(EF\right)}{P\left(F\right)}$
 
 ---
 
 ## 연속조건부분포(Continuous Conditional Distribution)
 
-- $f_{Y\mid X=x}\left(y\right) = \frac{f_{XY}\left(x,y\right)}{f_X\left(x\right)}$
+- $f_{Y\mid X=x}\left(y\right) = \dfrac{f_{XY}\left(x,y\right)}{f_X\left(x\right)}$
 
 ---
 
@@ -121,7 +121,9 @@ Z&\text{Cov}\left(Z,X\right)&\text{Cov}\left(Z,Y\right)&\text{Var}\left(Z\right)
 
 ## 상관계수(Correlation Coefficient)
 
-## $\rho\left(X, Y\right) = \dfrac{\text{Cov}\left(X,Y\right)}{\sigma_X\sigma_Y} \in \left[-1, 1\right]$
+$\rho\left(X, Y\right) = \dfrac{\text{Cov}\left(X,Y\right)}{\sigma_X\sigma_Y} \in \left[-1, 1\right]$
+
+---
 
 ## 모집단과 표본(Population and Sample)
 
@@ -146,9 +148,11 @@ $\begin{matrix}
 
 ---
 
-## 독립동일분포확률변수(Independent and Identically Distributed Random Variables)
+## 독립동일분포확률변수(Independent and Identically Distributed Random Variables(iid))
 
 $X_1\perp X_2\perp \cdots\perp X_n,\,X_1 \sim X_2 \sim \cdots \sim X_n\\\Rightarrow X_1, X_2, \cdots, X_n \sim \text{iid}$
+
+---
 
 ## 중심극한정리(Central Limit Theorem)
 
@@ -181,11 +185,14 @@ $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu
     - $\boldsymbol{X}$: 벡터
     - $\boldsymbol{\mu}$: 평균 벡터
     - $\boldsymbol{\Sigma}$: 공분산 행렬
-  - $f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{\left(x-\mu_X\right)^2}{\sigma_X^2} + \dfrac{\left(y-\mu_Y\right)^2}{\sigma_Y^2} - \dfrac{2\rho\left(x-\mu_X\right)\left(y-\mu_Y\right)}{\sigma_X\sigma_Y}\right)\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{x-\mu_x}{\sigma_X}-\dfrac{y-\mu_y}{\sigma_Y} \right)^2\right)$
+  - $f_{XY}\left(x, y\right) = \dfrac{1}{2\pi\sigma_X\sigma_Y\sqrt{1-\rho^2}}\exp\left(-\dfrac{1}{2\left(1-\rho^2\right)}\left(\dfrac{x-\mu_x}{\sigma_X}-\dfrac{y-\mu_y}{\sigma_Y} \right)^2\right)$
 
-- 모수적 모형(Parametric Model)
-  - 모집단의 분포를 정규분포로 가정
-  - 분포 $=$ 모델 $+$ 파라미터 $\theta$
+---
+
+## 모수적 모형(Parametric Model)
+
+- 모집단의 분포를 정규분포로 가정
+- 분포 $=$ 모델 $+$ 파라미터 $\theta$
 
 ---
 
@@ -200,6 +207,7 @@ $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu
 <!-- - 가능도 함수(Likelihood Function): $L\left(\theta\mid x\right) = f\left(x\mid\theta\right)$
 - 최대가능도추정(Maximum Likelihood Estimation): $\hat{\theta}_{MLE} = \underset{\theta}{\text{argmax}}\,L\left(\theta\mid x\right)$
 - $\hat{\theta}_{MLE}$: $\theta$의 최대가능도추정량(Maximum Likelihood Estimator) -->
+
 $X_1, X_2, \cdots, X_n \sim \text{iid}$
 
 - 가능도 함수(Likelihood Function): $L\left(X_1, X_2, \cdots, X_n\mid\theta\right) = \prod\limits_{i=1}^nf\left(X_i\mid\theta\right)$
@@ -211,9 +219,13 @@ $X_1, X_2, \cdots, X_n \sim \text{iid}$
 
 - $\theta_{MLE} = \underset{\theta}{\argmax}\,L\left(\theta\mid x\right) = \underset{\theta}{\argmax}\,LL\left(\theta\right)$
 
+---
+
 ## 선형회귀(Linear Regression)
 
 - 데이터의 분포를 가장 잘 설명하는 선형함수를 찾는 것
+
+---
 
 ## 최대사후확률추정(Maximum A Posteriori Estimation, MAP)
 
