@@ -129,3 +129,12 @@
   - $B$: 자기장
   - $l$: 길이
   - $v$: 속도
+
+---
+
+## 전자기파
+
+### 앙페르의 법칙 일반화
+
+- $\oint \vec{\bold{B}} \cdot d\vec{\bold{s}} = \mu_0 I + \mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}$
+- 
