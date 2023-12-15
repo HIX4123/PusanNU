@@ -59,7 +59,7 @@
 
 ### 등속 원운동상의 자기력
 
-- $F_B = qwB = \dfrac{mv^2}{r}$
+- $F_B = qvB = \dfrac{mv^2}{r}$
   - 반지름 $r = \dfrac{mv}{qB}$
   - 사이클로트론 진동수 $\omega = \dfrac{v}{r} = \dfrac{qB}{m}$
   - 주기 $T = \dfrac{2\pi r}{v} = \dfrac{2\pi}{\omega} = \dfrac{2\pi m}{qB}$
