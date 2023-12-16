@@ -161,10 +161,10 @@ $X_1, X_2, \cdots, X_n \sim \text{iid},\,E\left[X_i\right] = \mu,\,\text{Var}\le
 $\Rightarrow \bar{X} = \dfrac{1}{n}\sum\limits_{i=1}^nX_i \sim \text{N}\left(\mu, \dfrac{\sigma^2}{n}\right)$
 
 - $\sum\limits_{i=1}^n X_i\sim N\left(n\mu, n\sigma^2\right)$
-- Binomial RV
+<!-- - Binomial RV
   - $X \sim \text{Bin}\left(n, p\right) \Rightarrow X \sim \text{N}\left(np, np\left(1-p\right)\right)$
 - Uniform RV
-  - $X \sim \text{Unif}\left(a, b\right) \Rightarrow X \sim \text{N}\left(\dfrac{a+b}{2}, \dfrac{\left(b-a\right)^2}{12}\right)$
+  - $X \sim \text{Unif}\left(a, b\right) \Rightarrow X \sim \text{N}\left(\dfrac{a+b}{2}, \dfrac{\left(b-a\right)^2}{12}\right)$ -->
 
 ---
 
