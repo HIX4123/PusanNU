@@ -1,9 +1,52 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int main(int argc, char *argv[]) {
-  int i;
-  for (i = 0; i < argc; i++) {
-    printf("Argument %d: %s\n", i, argv[i]);
+typedef struct test {
+  int a;
+  float b;
+  char *c;
+  char d[10];
+} Test;
+
+void printTestDot(Test t) {
+  t.c = "cherry";
+  memcpy(t.d, "dragonfruit", 11);
+  printf("%d %f %s %s\n", t.a, t.b, t.c, t.d);
+}
+
+void printTestArrow(Test *t) {
+  t->c = "eggplant asdf";
+  strcpy(t->d, "fig asdf");
+  printf("%d %f %s %s\n", t->a, t->b, t->c, t->d);
+}
+
+void swapTest(Test *a, Test *b) {
+  Test temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void sortTest(Test *list, int size) {
+  for (Test *i = list; i < list + size; i++) {
+    for (Test *j = i + 1; j > list && j->a < (j - 1)->a; j--) {
+      swapTest(j, j - 1);
+    }
   }
+}
+
+int main(void) {
+  struct test t1 = {1, 2.0, "apple", "banana"};
+  Test t2 = {3, 4.0, "carrot", "durian"};
+  Test list[11] = {
+      {4, 2.0, "apple", "banana"},         {3, 4.0, "carrot", "durian"},
+      {6, 6.0, "eggplant", "fig"},         {1, 8.0, "grape", "honeydew"},
+      {2, 10.0, "ice cream", "jackfruit"}, {8, 12.0, "kiwi", "lemon"},
+      {0, 14.0, "mango", "nectarine"},     {7, 16.0, "orange", "peach"},
+      {9, 18.0, "quince", "raspberry"},    {5, 20.0, "strawberry", "tangerine"},
+      {10, 22.0, "ugli", "watermelon"}};
+  // printTestDot(t1);
+  // printTestArrow(&t2);
+  sortTest(list, 11);
+  for (Test *i = list; i <= list + 11; i++)
+    printf("%d %f %s %s\n", i->a, i->b, i->c, i->d);
 }
