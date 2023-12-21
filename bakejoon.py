@@ -1,2 +1,3 @@
-for i in range(100):
-    print(i+1)
+import random
+input()
+print(random.choice(["win","lose","draw"]))
